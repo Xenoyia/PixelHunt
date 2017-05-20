@@ -1,0 +1,14 @@
+[
+    {
+        "modid": "xphunt",
+        "name": "xP// Hunt",
+        "version": "0.5",
+        "requiredMods": [
+            "spongeapi@5.1.0",
+            "pixelmon"
+        ],
+        "dependencies": [
+            "pixelmon"
+        ]
+    }
+]
