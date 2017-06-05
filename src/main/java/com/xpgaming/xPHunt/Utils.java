@@ -118,18 +118,18 @@ public class Utils {
                 if(EnumRarePokemon.rarePokemon(Main.pokemon4)) Main.pokemon4rc = randomRareCandy(1);
                 else Main.pokemon4rc = randomRareCandy(0);
                 if(EnumRarePokemon.rarePokemon(Main.pokemon4)) {
-                Main.pokemon4ballReward = randomBall(4, 1);
-                Main.pokemon4moneyReward = randomMoney(1);
-            }
-            else if(EnumVeryRarePokemon.veryRarePokemon(Main.pokemon4)) {
+                    Main.pokemon4ballReward = randomBall(4, 1);
+                    Main.pokemon4moneyReward = randomMoney(1);
+                }
+                else if(EnumVeryRarePokemon.veryRarePokemon(Main.pokemon4)) {
                     Main.pokemon4rc = randomRareCandy(2);
                     Main.pokemon4ballReward = randomBall(4, 2);
                     Main.pokemon4moneyReward = randomMoney(2);
                 }
                 else {
-                Main.pokemon4ballReward = randomBall(4, 0);
-                Main.pokemon4moneyReward = randomMoney(0);
-            }
+                    Main.pokemon4ballReward = randomBall(4, 0);
+                    Main.pokemon4moneyReward = randomMoney(0);
+                }
                 startTimer(4);
                 break;
         }
@@ -174,7 +174,7 @@ public class Utils {
 
         long millis = fromTemp.until(to, ChronoUnit.MILLIS);
 
-        return "\u00A7e"+days+"\u00A76D \u00A7e"+hours+"\u00A76H \u00A7e" + minutes + "\u00A76M \u00A7e" + seconds + "\u00A76S\u00A7e";
+        return "\u00A7f"+days+"\u00A7bD \u00A7f"+hours+"\u00A7bH \u00A7f" + minutes + "\u00A7bM \u00A7f" + seconds + "\u00A7bS\u00A77";
 
     }
 
@@ -212,9 +212,9 @@ public class Utils {
                 date = date.plusHours(hours);
                 Main.pokemon1expiry = date;
                 Task task = Task.builder().execute(() -> {
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] The hunt for \u00A7a" + Main.pokemon1 + " \u00A7fhas ended!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f The hunt for \u00A7a" + Main.pokemon1 + " \u00A7fhas ended!"));
                     randomisePokemon(slot);
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon1 +"\u00A7f!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon1 +"\u00A7f!"));
 
                 })
                         .delay(hours, TimeUnit.HOURS)
@@ -234,9 +234,9 @@ public class Utils {
                 date = date.plusHours(hours);
                 Main.pokemon2expiry = date;
                 Task task2 = Task.builder().execute(() -> {
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] The hunt for \u00A7a" + Main.pokemon2 + " \u00A7fhas ended!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f The hunt for \u00A7a" + Main.pokemon2 + " \u00A7fhas ended!"));
                     randomisePokemon(slot);
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon2+"\u00A7f!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon2+"\u00A7f!"));
                 })
                         .delay(hours, TimeUnit.HOURS)
                         .name(slot + "HuntTimer")
@@ -255,9 +255,9 @@ public class Utils {
                 date = date.plusHours(hours);
                 Main.pokemon3expiry = date;
                 Task task3 = Task.builder().execute(() -> {
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] The hunt for \u00A7a" + Main.pokemon3 + " \u00A7fhas ended!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f The hunt for \u00A7a" + Main.pokemon3 + " \u00A7fhas ended!"));
                     randomisePokemon(slot);
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon3+"\u00A7f!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon3+"\u00A7f!"));
                 })
                         .delay(hours, TimeUnit.HOURS)
                         .name(slot + "HuntTimer")
@@ -276,9 +276,9 @@ public class Utils {
                 date = date.plusHours(hours);
                 Main.pokemon4expiry = date;
                 Task task4 = Task.builder().execute(() -> {
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] The hunt for \u00A7a" + Main.pokemon4 + " \u00A7fhas ended!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f The hunt for \u00A7a" + Main.pokemon4 + " \u00A7fhas ended!"));
                     randomisePokemon(slot);
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon4+"\u00A7f!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon4+"\u00A7f!"));
                 })
                         .delay(hours, TimeUnit.HOURS)
                         .name(slot + "HuntTimer")
@@ -386,13 +386,13 @@ public class Utils {
 
     public BigDecimal randomMoney(int rarity) {
         Random rn = new Random();
-        int min=50, max=150;
+        int min=75, max=100;
         if(rarity == 1)  {
             min = 150;
             max = 300;
         } else if(rarity == 2)  {
-            min = 250;
-            max = 500;
+            min = 500;
+            max = 2000;
         }
         BigDecimal total = BigDecimal.valueOf(rn.nextInt(max-min+1)+min);
         return total;
@@ -402,12 +402,12 @@ public class Utils {
         Random rn = new Random();
         int min=1, max=5;
         if(rarity == 1)  {
-            min = 10;
-            max = 15;
+            min = 5;
+            max = 10;
         }
         else if(rarity == 2)  {
-            min = 15;
-            max = 25;
+            min = 10;
+            max = 15;
         }
         ItemStack is = ItemStack.builder()
                 .itemType(Type("pixelmon:rare_candy"))
@@ -421,8 +421,47 @@ public class Utils {
         switch(slot) {
             case 1:
                 switch(name) {
+                    case "level_ball":
+                        Main.pokemon1ballName = "Level Balls";
+                        break;
+                    case "moon_ball":
+                        Main.pokemon1ballName = "Moon Balls";
+                        break;
+                    case "friend_ball":
+                        Main.pokemon1ballName = "Friend Balls";
+                        break;
+                    case "love_ball":
+                        Main.pokemon1ballName = "Love Balls";
+                        break;
+                    case "timer_ball":
+                        Main.pokemon1ballName = "Timer Balls";
+                        break;
+                    case "nest_ball":
+                        Main.pokemon1ballName = "Nest Balls";
+                        break;
+                    case "dive_ball":
+                        Main.pokemon1ballName = "Dive Balls";
+                        break;
+                    case "luxury_ball":
+                        Main.pokemon1ballName = "Luxury Balls";
+                        break;
+                    case "heal_ball":
+                        Main.pokemon1ballName = "Heal Balls";
+                        break;
+                    case "dusk_ball":
+                        Main.pokemon1ballName = "Dusk Balls";
+                        break;
+                    case "lure_ball":
+                        Main.pokemon1ballName = "Lure Balls";
+                        break;
+                    case "sport_ball":
+                        Main.pokemon1ballName = "Sport Balls";
+                        break;
                     case "ultra_ball":
                         Main.pokemon1ballName = "Ultra Balls";
+                        break;
+                    case "poke_ball":
+                        Main.pokemon1ballName = "Poke Balls";
                         break;
                     case "quick_ball":
                         Main.pokemon1ballName = "Quick Balls";
@@ -455,8 +494,47 @@ public class Utils {
                 break;
             case 2:
                 switch(name) {
+                    case "level_ball":
+                        Main.pokemon2ballName = "Level Balls";
+                        break;
+                    case "moon_ball":
+                        Main.pokemon2ballName = "Moon Balls";
+                        break;
+                    case "friend_ball":
+                        Main.pokemon2ballName = "Friend Balls";
+                        break;
+                    case "love_ball":
+                        Main.pokemon2ballName = "Love Balls";
+                        break;
+                    case "timer_ball":
+                        Main.pokemon2ballName = "Timer Balls";
+                        break;
+                    case "nest_ball":
+                        Main.pokemon2ballName = "Nest Balls";
+                        break;
+                    case "dive_ball":
+                        Main.pokemon2ballName = "Dive Balls";
+                        break;
+                    case "luxury_ball":
+                        Main.pokemon2ballName = "Luxury Balls";
+                        break;
+                    case "heal_ball":
+                        Main.pokemon2ballName = "Heal Balls";
+                        break;
+                    case "dusk_ball":
+                        Main.pokemon2ballName = "Dusk Balls";
+                        break;
+                    case "lure_ball":
+                        Main.pokemon2ballName = "Lure Balls";
+                        break;
+                    case "sport_ball":
+                        Main.pokemon2ballName = "Sport Balls";
+                        break;
                     case "ultra_ball":
                         Main.pokemon2ballName = "Ultra Balls";
+                        break;
+                    case "poke_ball":
+                        Main.pokemon2ballName = "Poke Balls";
                         break;
                     case "quick_ball":
                         Main.pokemon2ballName = "Quick Balls";
@@ -477,10 +555,10 @@ public class Utils {
                         Main.pokemon2ballName = "Great Balls";
                         break;
                     case "master_ball":
-                        Main.pokemon1ballName = "Master Balls";
+                        Main.pokemon2ballName = "Master Balls";
                         break;
                     case "park_ball":
-                        Main.pokemon1ballName = "Park Balls";
+                        Main.pokemon2ballName = "Park Balls";
                         break;
                     default:
                         Main.pokemon2ballName = "??? Balls";
@@ -489,8 +567,47 @@ public class Utils {
                 break;
             case 3:
                 switch(name) {
+                    case "level_ball":
+                        Main.pokemon3ballName = "Level Balls";
+                        break;
+                    case "moon_ball":
+                        Main.pokemon3ballName = "Moon Balls";
+                        break;
+                    case "friend_ball":
+                        Main.pokemon3ballName = "Friend Balls";
+                        break;
+                    case "love_ball":
+                        Main.pokemon3ballName = "Love Balls";
+                        break;
+                    case "timer_ball":
+                        Main.pokemon3ballName = "Timer Balls";
+                        break;
+                    case "nest_ball":
+                        Main.pokemon3ballName = "Nest Balls";
+                        break;
+                    case "dive_ball":
+                        Main.pokemon3ballName = "Dive Balls";
+                        break;
+                    case "luxury_ball":
+                        Main.pokemon3ballName = "Luxury Balls";
+                        break;
+                    case "heal_ball":
+                        Main.pokemon3ballName = "Heal Balls";
+                        break;
+                    case "dusk_ball":
+                        Main.pokemon3ballName = "Dusk Balls";
+                        break;
+                    case "lure_ball":
+                        Main.pokemon3ballName = "Lure Balls";
+                        break;
+                    case "sport_ball":
+                        Main.pokemon3ballName = "Sport Balls";
+                        break;
                     case "ultra_ball":
                         Main.pokemon3ballName = "Ultra Balls";
+                        break;
+                    case "poke_ball":
+                        Main.pokemon3ballName = "Poke Balls";
                         break;
                     case "quick_ball":
                         Main.pokemon3ballName = "Quick Balls";
@@ -511,10 +628,10 @@ public class Utils {
                         Main.pokemon3ballName = "Great Balls";
                         break;
                     case "master_ball":
-                        Main.pokemon1ballName = "Master Balls";
+                        Main.pokemon3ballName = "Master Balls";
                         break;
                     case "park_ball":
-                        Main.pokemon1ballName = "Park Balls";
+                        Main.pokemon3ballName = "Park Balls";
                         break;
                     default:
                         Main.pokemon3ballName = "??? Balls";
@@ -523,8 +640,47 @@ public class Utils {
                 break;
             case 4:
                 switch(name) {
+                    case "level_ball":
+                        Main.pokemon4ballName = "Level Balls";
+                        break;
+                    case "moon_ball":
+                        Main.pokemon4ballName = "Moon Balls";
+                        break;
+                    case "friend_ball":
+                        Main.pokemon4ballName = "Friend Balls";
+                        break;
+                    case "love_ball":
+                        Main.pokemon4ballName = "Love Balls";
+                        break;
+                    case "timer_ball":
+                        Main.pokemon4ballName = "Timer Balls";
+                        break;
+                    case "nest_ball":
+                        Main.pokemon4ballName = "Nest Balls";
+                        break;
+                    case "dive_ball":
+                        Main.pokemon4ballName = "Dive Balls";
+                        break;
+                    case "luxury_ball":
+                        Main.pokemon4ballName = "Luxury Balls";
+                        break;
+                    case "heal_ball":
+                        Main.pokemon4ballName = "Heal Balls";
+                        break;
+                    case "dusk_ball":
+                        Main.pokemon4ballName = "Dusk Balls";
+                        break;
+                    case "lure_ball":
+                        Main.pokemon4ballName = "Lure Balls";
+                        break;
+                    case "sport_ball":
+                        Main.pokemon4ballName = "Sport Balls";
+                        break;
                     case "ultra_ball":
                         Main.pokemon4ballName = "Ultra Balls";
+                        break;
+                    case "poke_ball":
+                        Main.pokemon4ballName = "Poke Balls";
                         break;
                     case "quick_ball":
                         Main.pokemon4ballName = "Quick Balls";
@@ -545,10 +701,10 @@ public class Utils {
                         Main.pokemon4ballName = "Great Balls";
                         break;
                     case "master_ball":
-                        Main.pokemon1ballName = "Master Balls";
+                        Main.pokemon4ballName = "Master Balls";
                         break;
                     case "park_ball":
-                        Main.pokemon1ballName = "Park Balls";
+                        Main.pokemon4ballName = "Park Balls";
                         break;
                     default:
                         Main.pokemon4ballName = "??? Balls";
@@ -558,14 +714,14 @@ public class Utils {
         }
 
         Random rn = new Random();
-        int min=8, max=24;
+        int min=1, max=5;
         if(rarity == 1) {
-            min = 16;
-            max = 48;
+            min = 5;
+            max = 10;
         }
         else if(rarity == 2) {
-            min = 24;
-            max = 64;
+            min = 10;
+            max = 20;
         }
         ItemStack is = ItemStack.builder()
                 .itemType(Type("pixelmon:"+name))
