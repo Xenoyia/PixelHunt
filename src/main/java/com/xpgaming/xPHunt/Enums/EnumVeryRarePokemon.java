@@ -4,10 +4,29 @@ package com.xpgaming.xPHunt.Enums;
  * Created by Lukas X. Valentine on 13/05/2017.
  */
 public enum EnumVeryRarePokemon {
-    Ditto,
-    Milotic,
-    Dragonair,
-    Dragonite;
+    Suicune,
+    Entei,
+    Raikou,
+    Lugia,
+    Hooh,
+    Regice,
+    Regirock,
+    Registeel,
+    Groudon,
+    Kyogre,
+    Rayquaza,
+    Regigigas,
+    Deoxys,
+    Jirachi,
+    Celebi,
+    Uxie,
+    Mesprit,
+    Azelf,
+    Latias,
+    Latios,
+    Mew,
+    Heatran,
+    Mewtwo;
 
     private EnumVeryRarePokemon() {
     }
