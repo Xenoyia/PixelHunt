@@ -18,12 +18,12 @@ public class CaptureListener {
     public void onPokemonCapture(CaptureEvent.SuccessfulCapture event) {
         EntityPlayerMP p = event.player;
         Player pl = (Player) p;
-        int oldIVs = event.pokemon.stats.IVs.SpAtt + event.pokemon.stats.IVs.HP + event.pokemon.stats.IVs.SpDef + event.pokemon.stats.IVs.Defence + event.pokemon.stats.IVs.Speed + event.pokemon.stats.IVs.Attack;
-        if(event.pokemon.getName().equalsIgnoreCase(Main.pokemon1)) {
-            if(event.pokemon.getNature().toString().equalsIgnoreCase(Main.nature1)) {
-                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.pokemon.getNature()+" "+event.pokemon.getName()+"\u00A7f)"));
-                increaseIVs(event.pokemon, pl);
-                int newIVs = event.pokemon.stats.IVs.SpAtt + event.pokemon.stats.IVs.HP + event.pokemon.stats.IVs.SpDef + event.pokemon.stats.IVs.Defence + event.pokemon.stats.IVs.Speed + event.pokemon.stats.IVs.Attack;
+        int oldIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
+        if(event.getPokemon().getName().equalsIgnoreCase(Main.pokemon1)) {
+            if(event.getPokemon().getNature().toString().equalsIgnoreCase(Main.nature1)) {
+                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.getPokemon().getNature()+" "+event.getPokemon().getName()+"\u00A7f)"));
+                increaseIVs(event.getPokemon(), pl);
+                int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 Main.getInstance().giveItemStack(Main.pokemon1ballReward, pl);
                 Main.getInstance().giveItemStack(Main.pokemon1rc, pl);
@@ -31,10 +31,10 @@ public class CaptureListener {
                 pl.sendMessage(Text.of("\u00A7f[\u00A76Hunt\u00A7f] \u00A76You have been given \u00A7e"+Main.pokemon1moneyReward+" coins\u00A76!"));
                 Utils.getInstance().randomisePokemon(1);
                 Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon1));
-            } else if(event.pokemon.getNature().toString().equalsIgnoreCase(Main.nature1b)) {
-                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.pokemon.getNature()+" "+event.pokemon.getName()+"\u00A7f)"));
-                increaseIVs(event.pokemon, pl);
-                int newIVs = event.pokemon.stats.IVs.SpAtt + event.pokemon.stats.IVs.HP + event.pokemon.stats.IVs.SpDef + event.pokemon.stats.IVs.Defence + event.pokemon.stats.IVs.Speed + event.pokemon.stats.IVs.Attack;
+            } else if(event.getPokemon().getNature().toString().equalsIgnoreCase(Main.nature1b)) {
+                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.getPokemon().getNature()+" "+event.getPokemon().getName()+"\u00A7f)"));
+                increaseIVs(event.getPokemon(), pl);
+                int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 Main.getInstance().giveItemStack(Main.pokemon1ballReward, pl);
                 Main.getInstance().giveItemStack(Main.pokemon1rc, pl);
@@ -42,10 +42,10 @@ public class CaptureListener {
                 pl.sendMessage(Text.of("\u00A7f[\u00A76Hunt\u00A7f] \u00A76You have been given \u00A7e"+Main.pokemon1moneyReward+" coins\u00A76!"));
                 Utils.getInstance().randomisePokemon(1);
                 Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon1));
-            } else if(event.pokemon.getNature().toString().equalsIgnoreCase(Main.nature1c)) {
-                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.pokemon.getNature()+" "+event.pokemon.getName()+"\u00A7f)"));
-                increaseIVs(event.pokemon, pl);
-                int newIVs = event.pokemon.stats.IVs.SpAtt + event.pokemon.stats.IVs.HP + event.pokemon.stats.IVs.SpDef + event.pokemon.stats.IVs.Defence + event.pokemon.stats.IVs.Speed + event.pokemon.stats.IVs.Attack;
+            } else if(event.getPokemon().getNature().toString().equalsIgnoreCase(Main.nature1c)) {
+                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.getPokemon().getNature()+" "+event.getPokemon().getName()+"\u00A7f)"));
+                increaseIVs(event.getPokemon(), pl);
+                int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 Main.getInstance().giveItemStack(Main.pokemon1ballReward, pl);
                 Main.getInstance().giveItemStack(Main.pokemon1rc, pl);
@@ -54,14 +54,14 @@ public class CaptureListener {
                 Utils.getInstance().randomisePokemon(1);
                 Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon1));
             } else {
-                increaseWildIVs(event.pokemon, pl);
+                increaseWildIVs(event.getPokemon(), pl);
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fThis one isn't right.. keep hunting!"));
             }
-        } else if(event.pokemon.getName().equalsIgnoreCase(Main.pokemon2)) {
-            if(event.pokemon.getNature().toString().equalsIgnoreCase(Main.nature2)) {
-                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.pokemon.getNature()+" "+event.pokemon.getName()+"\u00A7f)"));
-                increaseIVs(event.pokemon, pl);
-                int newIVs = event.pokemon.stats.IVs.SpAtt + event.pokemon.stats.IVs.HP + event.pokemon.stats.IVs.SpDef + event.pokemon.stats.IVs.Defence + event.pokemon.stats.IVs.Speed + event.pokemon.stats.IVs.Attack;
+        } else if(event.getPokemon().getName().equalsIgnoreCase(Main.pokemon2)) {
+            if(event.getPokemon().getNature().toString().equalsIgnoreCase(Main.nature2)) {
+                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.getPokemon().getNature()+" "+event.getPokemon().getName()+"\u00A7f)"));
+                increaseIVs(event.getPokemon(), pl);
+                int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 Main.getInstance().giveItemStack(Main.pokemon2ballReward, pl);
                 Main.getInstance().giveItemStack(Main.pokemon2rc, pl);
@@ -69,10 +69,10 @@ public class CaptureListener {
                 pl.sendMessage(Text.of("\u00A7f[\u00A76Hunt\u00A7f] \u00A76You have been given \u00A7e"+Main.pokemon2moneyReward+" coins\u00A76!"));
                 Utils.getInstance().randomisePokemon(2);
                 Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon2));
-            } else if(event.pokemon.getNature().toString().equalsIgnoreCase(Main.nature2b)) {
-                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.pokemon.getNature()+" "+event.pokemon.getName()+"\u00A7f)"));
-                increaseIVs(event.pokemon, pl);
-                int newIVs = event.pokemon.stats.IVs.SpAtt + event.pokemon.stats.IVs.HP + event.pokemon.stats.IVs.SpDef + event.pokemon.stats.IVs.Defence + event.pokemon.stats.IVs.Speed + event.pokemon.stats.IVs.Attack;
+            } else if(event.getPokemon().getNature().toString().equalsIgnoreCase(Main.nature2b)) {
+                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.getPokemon().getNature()+" "+event.getPokemon().getName()+"\u00A7f)"));
+                increaseIVs(event.getPokemon(), pl);
+                int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 Main.getInstance().giveItemStack(Main.pokemon2ballReward, pl);
                 Main.getInstance().giveItemStack(Main.pokemon2rc, pl);
@@ -80,10 +80,10 @@ public class CaptureListener {
                 pl.sendMessage(Text.of("\u00A7f[\u00A76Hunt\u00A7f] \u00A76You have been given \u00A7e"+Main.pokemon2moneyReward+" coins\u00A76!"));
                 Utils.getInstance().randomisePokemon(2);
                 Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon2));
-            } else if(event.pokemon.getNature().toString().equalsIgnoreCase(Main.nature2c)) {
-                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.pokemon.getNature()+" "+event.pokemon.getName()+"\u00A7f)"));
-                increaseIVs(event.pokemon, pl);
-                int newIVs = event.pokemon.stats.IVs.SpAtt + event.pokemon.stats.IVs.HP + event.pokemon.stats.IVs.SpDef + event.pokemon.stats.IVs.Defence + event.pokemon.stats.IVs.Speed + event.pokemon.stats.IVs.Attack;
+            } else if(event.getPokemon().getNature().toString().equalsIgnoreCase(Main.nature2c)) {
+                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.getPokemon().getNature()+" "+event.getPokemon().getName()+"\u00A7f)"));
+                increaseIVs(event.getPokemon(), pl);
+                int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 Main.getInstance().giveItemStack(Main.pokemon2ballReward, pl);
                 Main.getInstance().giveItemStack(Main.pokemon2rc, pl);
@@ -92,14 +92,14 @@ public class CaptureListener {
                 Utils.getInstance().randomisePokemon(2);
                 Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon2));
             } else {
-                increaseWildIVs(event.pokemon, pl);
+                increaseWildIVs(event.getPokemon(), pl);
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fThis one isn't right.. keep hunting!"));
             }
-        } else if(event.pokemon.getName().equalsIgnoreCase(Main.pokemon3)) {
-            if(event.pokemon.getNature().toString().equalsIgnoreCase(Main.nature3)) {
-                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.pokemon.getNature()+" "+event.pokemon.getName()+"\u00A7f)"));
-                increaseIVs(event.pokemon, pl);
-                int newIVs = event.pokemon.stats.IVs.SpAtt + event.pokemon.stats.IVs.HP + event.pokemon.stats.IVs.SpDef + event.pokemon.stats.IVs.Defence + event.pokemon.stats.IVs.Speed + event.pokemon.stats.IVs.Attack;
+        } else if(event.getPokemon().getName().equalsIgnoreCase(Main.pokemon3)) {
+            if(event.getPokemon().getNature().toString().equalsIgnoreCase(Main.nature3)) {
+                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.getPokemon().getNature()+" "+event.getPokemon().getName()+"\u00A7f)"));
+                increaseIVs(event.getPokemon(), pl);
+                int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 Main.getInstance().giveItemStack(Main.pokemon3ballReward, pl);
                 Main.getInstance().giveItemStack(Main.pokemon3rc, pl);
@@ -107,10 +107,10 @@ public class CaptureListener {
                 pl.sendMessage(Text.of("\u00A7f[\u00A76Hunt\u00A7f] \u00A76You have been given \u00A7e"+Main.pokemon3moneyReward+" coins\u00A76!"));
                 Utils.getInstance().randomisePokemon(3);
                 Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon3));
-            } else if(event.pokemon.getNature().toString().equalsIgnoreCase(Main.nature3b)) {
-                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.pokemon.getNature()+" "+event.pokemon.getName()+"\u00A7f)"));
-                increaseIVs(event.pokemon, pl);
-                int newIVs = event.pokemon.stats.IVs.SpAtt + event.pokemon.stats.IVs.HP + event.pokemon.stats.IVs.SpDef + event.pokemon.stats.IVs.Defence + event.pokemon.stats.IVs.Speed + event.pokemon.stats.IVs.Attack;
+            } else if(event.getPokemon().getNature().toString().equalsIgnoreCase(Main.nature3b)) {
+                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.getPokemon().getNature()+" "+event.getPokemon().getName()+"\u00A7f)"));
+                increaseIVs(event.getPokemon(), pl);
+                int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 Main.getInstance().giveItemStack(Main.pokemon3ballReward, pl);
                 Main.getInstance().giveItemStack(Main.pokemon3rc, pl);
@@ -118,10 +118,10 @@ public class CaptureListener {
                 pl.sendMessage(Text.of("\u00A7f[\u00A76Hunt\u00A7f] \u00A76You have been given \u00A7e"+Main.pokemon3moneyReward+" coins\u00A76!"));
                 Utils.getInstance().randomisePokemon(3);
                 Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon3));
-            } else if(event.pokemon.getNature().toString().equalsIgnoreCase(Main.nature3c)) {
-                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.pokemon.getNature()+" "+event.pokemon.getName()+"\u00A7f)"));
-                increaseIVs(event.pokemon, pl);
-                int newIVs = event.pokemon.stats.IVs.SpAtt + event.pokemon.stats.IVs.HP + event.pokemon.stats.IVs.SpDef + event.pokemon.stats.IVs.Defence + event.pokemon.stats.IVs.Speed + event.pokemon.stats.IVs.Attack;
+            } else if(event.getPokemon().getNature().toString().equalsIgnoreCase(Main.nature3c)) {
+                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.getPokemon().getNature()+" "+event.getPokemon().getName()+"\u00A7f)"));
+                increaseIVs(event.getPokemon(), pl);
+                int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 Main.getInstance().giveItemStack(Main.pokemon3ballReward, pl);
                 Main.getInstance().giveItemStack(Main.pokemon3rc, pl);
@@ -130,14 +130,14 @@ public class CaptureListener {
                 Utils.getInstance().randomisePokemon(3);
                 Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon3));
             } else {
-                increaseWildIVs(event.pokemon, pl);
+                increaseWildIVs(event.getPokemon(), pl);
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fThis one isn't right.. keep hunting!"));
             }
-        } else if(event.pokemon.getName().equalsIgnoreCase(Main.pokemon4)) {
-            if(event.pokemon.getNature().toString().equalsIgnoreCase(Main.nature4)) {
-                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.pokemon.getNature()+" "+event.pokemon.getName()+"\u00A7f)"));
-                increaseIVs(event.pokemon, pl);
-                int newIVs = event.pokemon.stats.IVs.SpAtt + event.pokemon.stats.IVs.HP + event.pokemon.stats.IVs.SpDef + event.pokemon.stats.IVs.Defence + event.pokemon.stats.IVs.Speed + event.pokemon.stats.IVs.Attack;
+        } else if(event.getPokemon().getName().equalsIgnoreCase(Main.pokemon4)) {
+            if(event.getPokemon().getNature().toString().equalsIgnoreCase(Main.nature4)) {
+                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.getPokemon().getNature()+" "+event.getPokemon().getName()+"\u00A7f)"));
+                increaseIVs(event.getPokemon(), pl);
+                int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 Main.getInstance().giveItemStack(Main.pokemon4ballReward, pl);
                 Main.getInstance().giveItemStack(Main.pokemon4rc, pl);
@@ -145,10 +145,10 @@ public class CaptureListener {
                 pl.sendMessage(Text.of("\u00A7f[\u00A76Hunt\u00A7f] \u00A76You have been given \u00A7e"+Main.pokemon4moneyReward+" coins\u00A76!"));
                 Utils.getInstance().randomisePokemon(4);
                 Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon4));
-            } else if(event.pokemon.getNature().toString().equalsIgnoreCase(Main.nature4b)) {
-                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.pokemon.getNature()+" "+event.pokemon.getName()+"\u00A7f)"));
-                increaseIVs(event.pokemon, pl);
-                int newIVs = event.pokemon.stats.IVs.SpAtt + event.pokemon.stats.IVs.HP + event.pokemon.stats.IVs.SpDef + event.pokemon.stats.IVs.Defence + event.pokemon.stats.IVs.Speed + event.pokemon.stats.IVs.Attack;
+            } else if(event.getPokemon().getNature().toString().equalsIgnoreCase(Main.nature4b)) {
+                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.getPokemon().getNature()+" "+event.getPokemon().getName()+"\u00A7f)"));
+                increaseIVs(event.getPokemon(), pl);
+                int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 Main.getInstance().giveItemStack(Main.pokemon4ballReward, pl);
                 Main.getInstance().giveItemStack(Main.pokemon4rc, pl);
@@ -156,10 +156,10 @@ public class CaptureListener {
                 pl.sendMessage(Text.of("\u00A7f[\u00A76Hunt\u00A7f] \u00A76You have been given \u00A7e"+Main.pokemon4moneyReward+" coins\u00A76!"));
                 Utils.getInstance().randomisePokemon(4);
                 Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon4));
-            } else if(event.pokemon.getNature().toString().equalsIgnoreCase(Main.nature4c)) {
-                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.pokemon.getNature()+" "+event.pokemon.getName()+"\u00A7f)"));
-                increaseIVs(event.pokemon, pl);
-                int newIVs = event.pokemon.stats.IVs.SpAtt + event.pokemon.stats.IVs.HP + event.pokemon.stats.IVs.SpDef + event.pokemon.stats.IVs.Defence + event.pokemon.stats.IVs.Speed + event.pokemon.stats.IVs.Attack;
+            } else if(event.getPokemon().getNature().toString().equalsIgnoreCase(Main.nature4c)) {
+                Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7a"+p.getName()+" \u00A7fcaught a \u00A7a/hunt\u00A7f Pok\u00E9mon! "+"\u00A7f(\u00A7a"+event.getPokemon().getNature()+" "+event.getPokemon().getName()+"\u00A7f)"));
+                increaseIVs(event.getPokemon(), pl);
+                int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 Main.getInstance().giveItemStack(Main.pokemon4ballReward, pl);
                 Main.getInstance().giveItemStack(Main.pokemon4rc, pl);
@@ -168,7 +168,7 @@ public class CaptureListener {
                 Utils.getInstance().randomisePokemon(4);
                 Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon4));
             } else {
-                increaseWildIVs(event.pokemon, pl);
+                increaseWildIVs(event.getPokemon(), pl);
                 pl.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7fThis one isn't right.. keep hunting!"));
             }
         }
