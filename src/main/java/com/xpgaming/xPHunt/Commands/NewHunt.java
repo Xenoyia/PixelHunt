@@ -26,13 +26,13 @@ public class NewHunt implements CommandExecutor {
             int theSlot = slot.get();
             if(theSlot > 0 && theSlot < 5) {
                 Utils.getInstance().randomisePokemon(theSlot);
-                src.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7aRandomised slot \u00A7f"+theSlot+"\u00A7a!"));
+                src.sendMessage(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f \u00A7aPokemon in slot \u00A7f"+theSlot+"\u00A7a has been Randomized!"));
             } else {
-                src.sendMessage(Text.of("\u00A7f[\u00A7cHunt\u00A7f] \u00A7cThat's not a valid slot!"));
+                src.sendMessage(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f \u00A7cThat's not a valid slot!"));
             }
         } else {
             Utils.getInstance().initialisePokemon();
-            src.sendMessage(Text.of("\u00A7f[\u00A7aHunt\u00A7f] \u00A7aRandomised all slots!"));
+            src.sendMessage(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f \u00A7aAll Pokemon have been Randomized."));
         }
         return CommandResult.success();
     }
