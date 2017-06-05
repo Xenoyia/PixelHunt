@@ -33,22 +33,22 @@ public class Hunt implements CommandExecutor {
         String space = "            ";
         Text indent = Text.of("");
         Text hover1 = Text.builder()
-                .color(TextColors.GOLD)
-                .append(Text.of("[\u00A76Natures]"))
-                .onHover(TextActions.showText(Text.of("\u00A76Nature 1: \u00A7e" + Main.nature1 + "\n\u00A76Nature 2: \u00A7e" + Main.nature1b + "\n\u00A76Nature 3: \u00A7e" + Main.nature1c)))
+                .color(TextColors.DARK_GRAY)
+                .append(Text.of("[\u00A7aNatures\u00A78]"))
+                .onHover(TextActions.showText(Text.of("\u00A7bNature 1: \u00A7f" + Main.nature1 + "\n\u00A7bNature 2: \u00A7f" + Main.nature1b + "\n\u00A7bNature 3: \u00A7f" + Main.nature1c)))
                 .build();
         Text hoverb1 = Text.builder()
-                .color(TextColors.GOLD)
-                .append(Text.of("[\u00A76Rewards]"))
-                .onHover(TextActions.showText(Text.of("\u00A76Balls: \u00A7e" + Main.pokemon1ballReward.getQuantity() + " " + Main.pokemon1ballName + "\n\u00A76Money: \u00A7e" + Main.pokemon1moneyReward + " coins\n\u00A76Rare Candies: \u00A7e" + Main.pokemon1rc.getQuantity())))// + "\n\u00A76IVs: \u00A7e" + IVUpgrade(EnumNature.natureFromString(Main.nature1).index))))
+                .color(TextColors.DARK_GRAY)
+                .append(Text.of("[\u00A7eRewards\u00A78]"))
+                .onHover(TextActions.showText(Text.of("\u00A7dBalls: \u00A7f" + Main.pokemon1ballReward.getQuantity() + " " + Main.pokemon1ballName + "\n\u00A72Money: \u00A7f" + Main.pokemon1moneyReward + " coins\n\u00A73Rare Candies: \u00A7f" + Main.pokemon1rc.getQuantity())))// + "\n\u00A76IVs: \u00A7f" + IVUpgrade(EnumNature.natureFromString(Main.nature1).index))))
                 .build();
         Text hoverc1 = Text.builder()
-                .color(TextColors.GOLD)
-                .append(Text.of("[\u00A76Expiry]"))
+                .color(TextColors.DARK_GRAY)
+                .append(Text.of("[\u00A7cExpiry\u00A78]"))
                 .onHover(TextActions.showText(Text.of(Utils.getInstance().calculateTimeDifference(timeNow, Main.pokemon1expiry))))
                 .build();
         Text line1 = Text.builder()
-                .append(Text.of("\u00A76\u00A7l1) \u00A7e"+Main.pokemon1))
+                .append(Text.of("\u00A7f\u00A7l 1 \u00A7b"+Main.pokemon1))
                 .color(TextColors.AQUA)
                 .append(Text.of(" "))
                 .color(TextColors.WHITE)
@@ -59,22 +59,22 @@ public class Hunt implements CommandExecutor {
                 .append(hoverc1)
                 .build();
         Text hover2 = Text.builder()
-                .color(TextColors.GOLD)
-                .append(Text.of("[\u00A76Natures]"))
-                .onHover(TextActions.showText(Text.of("\u00A76Nature 1: \u00A7e" + Main.nature2 + "\n\u00A76Nature 2: \u00A7e" + Main.nature2b + "\n\u00A76Nature 3: \u00A7e" + Main.nature2c)))
+                .color(TextColors.DARK_GRAY)
+                .append(Text.of("[\u00A7aNatures\u00A78]"))
+                .onHover(TextActions.showText(Text.of("\u00A7bNature 1: \u00A7f" + Main.nature2 + "\n\u00A7bNature 2: \u00A7f" + Main.nature2b + "\n\u00A7bNature 3: \u00A7f" + Main.nature2c)))
                 .build();
         Text hoverb2 = Text.builder()
-                .color(TextColors.GOLD)
-                .append(Text.of("[\u00A76Rewards]"))
-                .onHover(TextActions.showText(Text.of("\u00A76Balls: \u00A7e" + Main.pokemon2ballReward.getQuantity() + " " + Main.pokemon2ballName + "\n\u00A76Money: \u00A7e" + Main.pokemon2moneyReward + " coins\n\u00A76Rare Candies: \u00A7e" + Main.pokemon2rc.getQuantity())))// + "\n\u00A76IVs: \u00A7e" + IVUpgrade(EnumNature.natureFromString(Main.nature2).index))))
+                .color(TextColors.DARK_GRAY)
+                .append(Text.of("[\u00A7eRewards\u00A78]"))
+                .onHover(TextActions.showText(Text.of("\u00A7dBalls: \u00A7f" + Main.pokemon2ballReward.getQuantity() + " " + Main.pokemon2ballName + "\n\u00A72Money: \u00A7f" + Main.pokemon2moneyReward + " coins\n\u00A73Rare Candies: \u00A7f" + Main.pokemon2rc.getQuantity())))// + "\n\u00A76IVs: \u00A7f" + IVUpgrade(EnumNature.natureFromString(Main.nature2).index))))
                 .build();
         Text hoverc2 = Text.builder()
-                .color(TextColors.GOLD)
-                .append(Text.of("[\u00A76Expiry]"))
+                .color(TextColors.DARK_GRAY)
+                .append(Text.of("[\u00A7cExpiry\u00A78]"))
                 .onHover(TextActions.showText(Text.of(Utils.getInstance().calculateTimeDifference(timeNow, Main.pokemon2expiry))))
                 .build();
         Text line2 = Text.builder()
-                .append(Text.of("\u00A76\u00A7l2) \u00A7e"+Main.pokemon2))
+                .append(Text.of("\u00A7f\u00A7l 2 \u00A7b"+Main.pokemon2))
                 .color(TextColors.AQUA)
                 .append(Text.of(" "))
                 .color(TextColors.WHITE)
@@ -85,22 +85,22 @@ public class Hunt implements CommandExecutor {
                 .append(hoverc2)
                 .build();
         Text hover3 = Text.builder()
-                .color(TextColors.GOLD)
-                .append(Text.of("[\u00A76Natures]"))
-                .onHover(TextActions.showText(Text.of("\u00A76Nature 1: \u00A7e" + Main.nature3 + "\n\u00A76Nature 2: \u00A7e" + Main.nature3b + "\n\u00A76Nature 3: \u00A7e" + Main.nature3c)))
+                .color(TextColors.DARK_GRAY)
+                .append(Text.of("[\u00A7aNatures\u00A78]"))
+                .onHover(TextActions.showText(Text.of("\u00A7bNature 1: \u00A7f" + Main.nature3 + "\n\u00A7bNature 2: \u00A7f" + Main.nature3b + "\n\u00A7bNature 3: \u00A7f" + Main.nature3c)))
                 .build();
         Text hoverb3 = Text.builder()
-                .color(TextColors.GOLD)
-                .append(Text.of("[\u00A76Rewards]"))
-                .onHover(TextActions.showText(Text.of("\u00A76Balls: \u00A7e" + Main.pokemon3ballReward.getQuantity() + " " + Main.pokemon3ballName + "\n\u00A76Money: \u00A7e" + Main.pokemon3moneyReward + " coins\n\u00A76Rare Candies: \u00A7e" + Main.pokemon3rc.getQuantity())))// + "\n\u00A76IVs: \u00A7e" + IVUpgrade(EnumNature.natureFromString(Main.nature3).index))))
+                .color(TextColors.DARK_GRAY)
+                .append(Text.of("[\u00A7eRewards\u00A78]"))
+                .onHover(TextActions.showText(Text.of("\u00A7dBalls: \u00A7f" + Main.pokemon3ballReward.getQuantity() + " " + Main.pokemon3ballName + "\n\u00A72Money: \u00A7f" + Main.pokemon3moneyReward + " coins\n\u00A73Rare Candies: \u00A7f" + Main.pokemon3rc.getQuantity())))// + "\n\u00A76IVs: \u00A7f" + IVUpgrade(EnumNature.natureFromString(Main.nature3).index))))
                 .build();
         Text hoverc3 = Text.builder()
-                .color(TextColors.GOLD)
-                .append(Text.of("[\u00A76Expiry]"))
+                .color(TextColors.DARK_GRAY)
+                .append(Text.of("[\u00A7cExpiry\u00A78]"))
                 .onHover(TextActions.showText(Text.of(Utils.getInstance().calculateTimeDifference(timeNow, Main.pokemon3expiry))))
                 .build();
         Text line3 = Text.builder()
-                .append(Text.of("\u00A76\u00A7l3) \u00A7e"+Main.pokemon3))
+                .append(Text.of("\u00A7f\u00A7l 3 \u00A7b"+Main.pokemon3))
                 .color(TextColors.AQUA)
                 .append(Text.of(" "))
                 .color(TextColors.WHITE)
@@ -111,22 +111,22 @@ public class Hunt implements CommandExecutor {
                 .append(hoverc3)
                 .build();
         Text hover4 = Text.builder()
-                .color(TextColors.GOLD)
-                .append(Text.of("[\u00A76Natures]"))
-                .onHover(TextActions.showText(Text.of("\u00A76Nature 1: \u00A7e" + Main.nature4 + "\n\u00A76Nature 2: \u00A7e" + Main.nature4b + "\n\u00A76Nature 3: \u00A7e" + Main.nature4c)))
+                .color(TextColors.DARK_GRAY)
+                .append(Text.of("[\u00A7aNatures\u00A78]"))
+                .onHover(TextActions.showText(Text.of("\u00A7bNature 1: \u00A7f" + Main.nature4 + "\n\u00A7bNature 2: \u00A7f" + Main.nature4b + "\n\u00A7bNature 3: \u00A7f" + Main.nature4c)))
                 .build();
         Text hoverb4 = Text.builder()
-                .color(TextColors.GOLD)
-                .append(Text.of("[\u00A76Rewards]"))
-                .onHover(TextActions.showText(Text.of("\u00A76Balls: \u00A7e" + Main.pokemon4ballReward.getQuantity() + " " + Main.pokemon4ballName + "\n\u00A76Money: \u00A7e" + Main.pokemon4moneyReward + " coins\n\u00A76Rare Candies: \u00A7e" + Main.pokemon4rc.getQuantity())))// + "\n\u00A76IVs: \u00A7e" + IVUpgrade(EnumNature.natureFromString(Main.nature4).index))))
+                .color(TextColors.DARK_GRAY)
+                .append(Text.of("[\u00A7eRewards\u00A78]"))
+                .onHover(TextActions.showText(Text.of("\u00A7dBalls: \u00A7f" + Main.pokemon4ballReward.getQuantity() + " " + Main.pokemon4ballName + "\n\u00A72Money: \u00A7f" + Main.pokemon4moneyReward + " coins\n\u00A73Rare Candies: \u00A7f" + Main.pokemon4rc.getQuantity())))// + "\n\u00A76IVs: \u00A7f" + IVUpgrade(EnumNature.natureFromString(Main.nature4).index))))
                 .build();
         Text hoverc4 = Text.builder()
-                .color(TextColors.GOLD)
-                .append(Text.of("[\u00A76Expiry]"))
+                .color(TextColors.DARK_GRAY)
+                .append(Text.of("[\u00A7cExpiry\u00A78]"))
                 .onHover(TextActions.showText(Text.of(Utils.getInstance().calculateTimeDifference(timeNow, Main.pokemon4expiry))))
                 .build();
         Text line4 = Text.builder()
-                .append(Text.of("\u00A76\u00A7l4) \u00A7e"+Main.pokemon4))
+                .append(Text.of("\u00A7f\u00A7l 4 \u00A7b"+Main.pokemon4))
                 .color(TextColors.AQUA)
                 .append(Text.of(" "))
                 .color(TextColors.WHITE)
@@ -137,9 +137,9 @@ public class Hunt implements CommandExecutor {
                 .append(hoverc4)
                 .build();
         Text line5 = Text.builder()
-                .color(TextColors.DARK_GREEN)
-                .append(Text.of("[More Info]"))
-                .onHover(TextActions.showText(Text.of("\u00A7aAny Pok\u00E9mon that's on\n\u00A7athis list will receive a\n\u00A7a10% (20% if rare) IV\n\u00A7aboost when caught. If\n\u00A7ait has one of the listed\n\u00A7anatures, you get rewards\n\u00A7aand an even greater \n\u00A7aIV boost!")))
+                .color(TextColors.DARK_GRAY)
+                .append(Text.of("[\u00A76More Info\u00A78]"))
+                .onHover(TextActions.showText(Text.of("\u00A7b\u00A7l     How Does it Work?\n\u00A78\u00A7m-----\u00A77\u00A7m-----\u00A7f\u00A7m-----\u00A77\u00A7m-----\u00A78\u00A7m-----\n\u00A7a  Any Pok\u00E9mon that's on this\n\u00A7a     list will receive a 10%\n\u00A7a    (20% if rare) IV boost \n\u00A7a    when caught. If it has\n\u00A7a  one of the listed natures\n\u00A7a   you get rewards and an\n\u00A7a   even greater IV boost!\n\u00A78\u00A7m-----\u00A77\u00A7m-----\u00A7f\u00A7m-----\u00A77\u00A7m-----\u00A78\u00A7m-----")))
                 .build();
         contents.add(line1);
         contents.add(line2);
@@ -147,9 +147,9 @@ public class Hunt implements CommandExecutor {
         contents.add(line4);
         contents.add(line5);
         PaginationList.builder()
-                .title(Text.builder("xP// Pokemon Hunt").color(TextColors.GREEN).build())
+                .title(Text.builder("Pokemon Hunt").color(TextColors.WHITE).build())
                 .contents(contents)
-                .padding(Text.builder("-").color(TextColors.GREEN).build())
+                .padding(Text.builder("-").color(TextColors.WHITE).build())
                 .sendTo(src);
         return CommandResult.success();
     }
