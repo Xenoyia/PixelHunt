@@ -1,4 +1,4 @@
-package com.xpgaming.xPHunt.Enums;
+package com.xpgaming.xphunt.enums;
 
 public enum EnumEvolutionPokemon {
     Bulbasaur,

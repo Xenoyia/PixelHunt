@@ -1,27 +1,21 @@
-package com.xpgaming.xPHunt;
+package com.xpgaming.xphunt;
 
-import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
 import com.pixelmonmod.pixelmon.enums.EnumNature;
 import com.pixelmonmod.pixelmon.enums.EnumPokemon;
-import com.xpgaming.xPHunt.Enums.EnumEvolutionPokemon;
-import com.xpgaming.xPHunt.Enums.EnumItems;
-import com.xpgaming.xPHunt.Enums.EnumRarePokemon;
-import com.xpgaming.xPHunt.Enums.EnumVeryRarePokemon;
-import org.apache.commons.lang3.time.DateUtils;
+import com.xpgaming.xphunt.enums.EnumEvolutionPokemon;
+import com.xpgaming.xphunt.enums.EnumItems;
+import com.xpgaming.xphunt.enums.EnumRarePokemon;
+import com.xpgaming.xphunt.enums.EnumVeryRarePokemon;
 import org.spongepowered.api.Sponge;
 import org.spongepowered.api.item.ItemType;
 import org.spongepowered.api.item.inventory.ItemStack;
 import org.spongepowered.api.scheduler.Task;
 import org.spongepowered.api.text.Text;
-import org.spongepowered.api.text.action.TextActions;
-import org.spongepowered.api.text.format.TextColors;
 
 import java.math.BigDecimal;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import java.util.Date;
-import java.util.Optional;
 import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -212,9 +206,9 @@ public class Utils {
                 date = date.plusHours(hours);
                 Main.pokemon1expiry = date;
                 Task task = Task.builder().execute(() -> {
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f The hunt for \u00A7a" + Main.pokemon1 + " \u00A7fhas ended!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o]\u00A7f The hunt for \u00A7a" + Main.pokemon1 + " \u00A7fhas ended!"));
                     randomisePokemon(slot);
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon1 +"\u00A7f!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o]\u00A7f New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon1 +"\u00A7f!"));
 
                 })
                         .delay(hours, TimeUnit.HOURS)
@@ -234,9 +228,9 @@ public class Utils {
                 date = date.plusHours(hours);
                 Main.pokemon2expiry = date;
                 Task task2 = Task.builder().execute(() -> {
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f The hunt for \u00A7a" + Main.pokemon2 + " \u00A7fhas ended!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o]\u00A7f The hunt for \u00A7a" + Main.pokemon2 + " \u00A7fhas ended!"));
                     randomisePokemon(slot);
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon2+"\u00A7f!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o]\u00A7f New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon2+"\u00A7f!"));
                 })
                         .delay(hours, TimeUnit.HOURS)
                         .name(slot + "HuntTimer")
@@ -255,9 +249,9 @@ public class Utils {
                 date = date.plusHours(hours);
                 Main.pokemon3expiry = date;
                 Task task3 = Task.builder().execute(() -> {
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f The hunt for \u00A7a" + Main.pokemon3 + " \u00A7fhas ended!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o]\u00A7f The hunt for \u00A7a" + Main.pokemon3 + " \u00A7fhas ended!"));
                     randomisePokemon(slot);
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon3+"\u00A7f!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o]\u00A7f New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon3+"\u00A7f!"));
                 })
                         .delay(hours, TimeUnit.HOURS)
                         .name(slot + "HuntTimer")
@@ -276,9 +270,9 @@ public class Utils {
                 date = date.plusHours(hours);
                 Main.pokemon4expiry = date;
                 Task task4 = Task.builder().execute(() -> {
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f The hunt for \u00A7a" + Main.pokemon4 + " \u00A7fhas ended!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o]\u00A7f The hunt for \u00A7a" + Main.pokemon4 + " \u00A7fhas ended!"));
                     randomisePokemon(slot);
-                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o] \u00A7eProf. Oak \u00A78//\u00A7f New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon4+"\u00A7f!"));
+                    Sponge.getServer().getBroadcastChannel().send(Text.of("\u00A78\u00A7o[\u00A7bHunt\u00A78\u00A7o]\u00A7f New Pok\u00E9mon to hunt is \u00A7a" + Main.pokemon4+"\u00A7f!"));
                 })
                         .delay(hours, TimeUnit.HOURS)
                         .name(slot + "HuntTimer")
@@ -386,13 +380,13 @@ public class Utils {
 
     public BigDecimal randomMoney(int rarity) {
         Random rn = new Random();
-        int min=75, max=100;
+        int min=500, max=2500;
         if(rarity == 1)  {
-            min = 150;
-            max = 300;
+            min = 2500;
+            max = 3500;
         } else if(rarity == 2)  {
-            min = 500;
-            max = 2000;
+            min = 5000;
+            max = 7500;
         }
         BigDecimal total = BigDecimal.valueOf(rn.nextInt(max-min+1)+min);
         return total;
@@ -400,14 +394,14 @@ public class Utils {
 
     public ItemStack randomRareCandy(int rarity) {
         Random rn = new Random();
-        int min=1, max=5;
+        int min=10, max=15;
         if(rarity == 1)  {
-            min = 5;
-            max = 10;
+            min = 15;
+            max = 20;
         }
         else if(rarity == 2)  {
-            min = 10;
-            max = 15;
+            min = 20;
+            max = 40;
         }
         ItemStack is = ItemStack.builder()
                 .itemType(Type("pixelmon:rare_candy"))
@@ -714,14 +708,14 @@ public class Utils {
         }
 
         Random rn = new Random();
-        int min=1, max=5;
+        int min=10, max=18;
         if(rarity == 1) {
-            min = 5;
-            max = 10;
+            min = 15;
+            max = 25;
         }
         else if(rarity == 2) {
-            min = 10;
-            max = 20;
+            min = 32;
+            max = 64;
         }
         ItemStack is = ItemStack.builder()
                 .itemType(Type("pixelmon:"+name))
