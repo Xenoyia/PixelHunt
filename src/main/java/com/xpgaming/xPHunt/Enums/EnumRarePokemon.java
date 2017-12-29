@@ -1,4 +1,4 @@
-package com.xpgaming.xPHunt.Enums;
+package com.xpgaming.xphunt.enums;
 
 /**
  * Created by Lukas X. Valentine on 13/05/2017.

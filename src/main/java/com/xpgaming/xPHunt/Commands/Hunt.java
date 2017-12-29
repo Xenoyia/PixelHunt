@@ -1,25 +1,17 @@
-package com.xpgaming.xPHunt.Commands;
+package com.xpgaming.xphunt.commands;
 
-import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
-import com.pixelmonmod.pixelmon.enums.EnumNature;
-import com.pixelmonmod.pixelmon.storage.NbtKeys;
-import com.xpgaming.xPHunt.Main;
-import com.xpgaming.xPHunt.Utils;
-import net.minecraft.nbt.NBTTagCompound;
-import org.spongepowered.api.Sponge;
+import com.xpgaming.xphunt.Main;
+import com.xpgaming.xphunt.Utils;
 import org.spongepowered.api.command.CommandException;
 import org.spongepowered.api.command.CommandResult;
 import org.spongepowered.api.command.CommandSource;
 import org.spongepowered.api.command.args.CommandContext;
 import org.spongepowered.api.command.spec.CommandExecutor;
-import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.service.pagination.PaginationList;
 import org.spongepowered.api.text.Text;
-import org.spongepowered.api.text.action.HoverAction;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
