@@ -1,35 +1,38 @@
 Symbol range map extraction starting
-Processing 11 files
-startProcessing "com\xpgaming\xphunt\Main.java" md5: c1b4f72053cb84da10a0f5615c18ea8d
-endProcessing "com\xpgaming\xphunt\Main.java"
+Processing 10 files
+startProcessing "com\xpgaming\PixelHunt\Commands\Hunt.java" md5: 1c482e55b97fb11483d1f6d8862de0e8
+endProcessing "com\xpgaming\PixelHunt\Commands\Hunt.java"
 
-startProcessing "com\xpgaming\xphunt\Utils.java" md5: a9b1b4e3e0708f224068d8cb8ffb7716
-endProcessing "com\xpgaming\xphunt\Utils.java"
+startProcessing "com\xpgaming\PixelHunt\Commands\NewHunt.java" md5: fcb5ccaea8370b6110f8b71c70bdc108
+Cache Hit!
+endProcessing "com\xpgaming\PixelHunt\Commands\NewHunt.java"
 
-startProcessing "com\xpgaming\xphunt\commands\Hunt.java" md5: a96d04d2e3fabef49e4a9ffd4826ced2
-endProcessing "com\xpgaming\xphunt\commands\Hunt.java"
+startProcessing "com\xpgaming\PixelHunt\Commands\Reload.java" md5: adfd26e0de1301ff26d543347aab4e54
+Cache Hit!
+endProcessing "com\xpgaming\PixelHunt\Commands\Reload.java"
 
-startProcessing "com\xpgaming\xphunt\commands\NewHunt.java" md5: c55c98be3c312d8713cf2b079d346cdb
-endProcessing "com\xpgaming\xphunt\commands\NewHunt.java"
+startProcessing "com\xpgaming\PixelHunt\Config.java" md5: 5c80660dbfc009a083847341292517cf
+endProcessing "com\xpgaming\PixelHunt\Config.java"
 
-startProcessing "com\xpgaming\xphunt\enums\EnumEvolutionPokemon.java" md5: 931925ccd7b4bfdc2f4ea935cca7cae2
-endProcessing "com\xpgaming\xphunt\enums\EnumEvolutionPokemon.java"
+startProcessing "com\xpgaming\PixelHunt\Enums\EnumItems.java" md5: 244f7adc0ce085cca5845ada2dd0e92b
+Cache Hit!
+endProcessing "com\xpgaming\PixelHunt\Enums\EnumItems.java"
 
-startProcessing "com\xpgaming\xphunt\enums\EnumItems.java" md5: 4ec9b6083bf2f524db367c1ab866dfd7
-endProcessing "com\xpgaming\xphunt\enums\EnumItems.java"
+startProcessing "com\xpgaming\PixelHunt\Enums\EnumRareItems.java" md5: f9f15bb7a11fa841dda7f73782bdecbe
+Cache Hit!
+endProcessing "com\xpgaming\PixelHunt\Enums\EnumRareItems.java"
 
-startProcessing "com\xpgaming\xphunt\enums\EnumRareItems.java" md5: eec0f7e63198a9549a59259bd353af27
-endProcessing "com\xpgaming\xphunt\enums\EnumRareItems.java"
+startProcessing "com\xpgaming\PixelHunt\Listeners\CaptureListener.java" md5: 5ca2818d1fbd0beaa85662c78ea3f6a2
+Cache Hit!
+endProcessing "com\xpgaming\PixelHunt\Listeners\CaptureListener.java"
 
-startProcessing "com\xpgaming\xphunt\enums\EnumRarePokemon.java" md5: 3e3c465ea97e716f46744f210c861188
-endProcessing "com\xpgaming\xphunt\enums\EnumRarePokemon.java"
+startProcessing "com\xpgaming\PixelHunt\Listeners\PixelmonSpawnListener.java" md5: 179f502a122ee85c4ba953c9b26aeb35
+Cache Hit!
+endProcessing "com\xpgaming\PixelHunt\Listeners\PixelmonSpawnListener.java"
 
-startProcessing "com\xpgaming\xphunt\enums\EnumVeryRarePokemon.java" md5: a98fe20b763ad4556d23e3ee5803ac96
-endProcessing "com\xpgaming\xphunt\enums\EnumVeryRarePokemon.java"
+startProcessing "com\xpgaming\PixelHunt\Main.java" md5: e6e048675e1b7ec7a6bd6a9399a892da
+endProcessing "com\xpgaming\PixelHunt\Main.java"
 
-startProcessing "com\xpgaming\xphunt\listeners\CaptureListener.java" md5: 1a17217ece8ba2d78670b30c5cecab3b
-endProcessing "com\xpgaming\xphunt\listeners\CaptureListener.java"
-
-startProcessing "com\xpgaming\xphunt\listeners\PixelmonSpawnListener.java" md5: 0f640057c3e61318ec06f8bd5877826e
-endProcessing "com\xpgaming\xphunt\listeners\PixelmonSpawnListener.java"
+startProcessing "com\xpgaming\PixelHunt\Utils.java" md5: dc54b8515be77a8bbc3bcd97c5d8b18c
+endProcessing "com\xpgaming\PixelHunt\Utils.java"
 

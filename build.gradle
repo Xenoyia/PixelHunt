@@ -18,8 +18,13 @@ buildscript {
 apply plugin: "net.minecraftforge.gradle.forge"
 apply plugin: "org.spongepowered.plugin"
 
-version = modVersion
 group = modGroup
+archivesBaseName = modBaseName
+version = "0.8-MC${project.minecraftVersion}-F${project.forgeBuild}-S${project.spongeAPIVersion.split("-")[0]}"
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 
 minecraft {
     version = project.forgeVersion
@@ -36,11 +41,19 @@ minecraft {
 
 repositories {
     mavenCentral()
+    maven {
+        name = 'sponge'
+        url = 'https://repo.spongepowered.org/maven'
+    }
 }
 
 dependencies {
-    compile 'org.spongepowered:spongeapi:7.0.0-SNAPSHOT'
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile ("org.spongepowered:spongeapi:${project.spongeAPIVersion}")
 }
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
 
 processResources {
     // this will ensure that this task is redone when the versions change.
