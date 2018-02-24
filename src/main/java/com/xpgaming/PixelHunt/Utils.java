@@ -378,17 +378,21 @@ public class Utils {
     }
 
     public BigDecimal randomMoney(int rarity) {
-        Random rn = new Random();
-        int min=Config.getInstance().getConfig().getNode("pixelhunt","rewards","common-money-min").getInt(), max=Config.getInstance().getConfig().getNode("pixelhunt","rewards","common-money-max").getInt();
-        if(rarity == 1)  {
-            min = Config.getInstance().getConfig().getNode("pixelhunt","rewards","uncommon-money-min").getInt();
-            max = Config.getInstance().getConfig().getNode("pixelhunt","rewards","uncommon-money-max").getInt();
-        } else if(rarity == 2)  {
-            min = Config.getInstance().getConfig().getNode("pixelhunt","rewards","rare-money-min").getInt();
-            max = Config.getInstance().getConfig().getNode("pixelhunt","rewards","rare-money-max").getInt();
+        if(Main.hasEconomy) {
+            Random rn = new Random();
+            int min = Config.getInstance().getConfig().getNode("pixelhunt", "rewards", "common-money-min").getInt(), max = Config.getInstance().getConfig().getNode("pixelhunt", "rewards", "common-money-max").getInt();
+            if (rarity == 1) {
+                min = Config.getInstance().getConfig().getNode("pixelhunt", "rewards", "uncommon-money-min").getInt();
+                max = Config.getInstance().getConfig().getNode("pixelhunt", "rewards", "uncommon-money-max").getInt();
+            } else if (rarity == 2) {
+                min = Config.getInstance().getConfig().getNode("pixelhunt", "rewards", "rare-money-min").getInt();
+                max = Config.getInstance().getConfig().getNode("pixelhunt", "rewards", "rare-money-max").getInt();
+            }
+            BigDecimal total = BigDecimal.valueOf(rn.nextInt(max - min + 1) + min);
+            return total;
+        } else {
+            return BigDecimal.valueOf(0);
         }
-        BigDecimal total = BigDecimal.valueOf(rn.nextInt(max-min+1)+min);
-        return total;
     }
 
     public ItemStack randomRareCandy(int rarity) {

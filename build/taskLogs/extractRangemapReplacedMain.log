@@ -1,6 +1,7 @@
 Symbol range map extraction starting
 Processing 10 files
 startProcessing "com\xpgaming\PixelHunt\Commands\Hunt.java" md5: 1c482e55b97fb11483d1f6d8862de0e8
+Cache Hit!
 endProcessing "com\xpgaming\PixelHunt\Commands\Hunt.java"
 
 startProcessing "com\xpgaming\PixelHunt\Commands\NewHunt.java" md5: fcb5ccaea8370b6110f8b71c70bdc108
@@ -12,6 +13,7 @@ Cache Hit!
 endProcessing "com\xpgaming\PixelHunt\Commands\Reload.java"
 
 startProcessing "com\xpgaming\PixelHunt\Config.java" md5: 5c80660dbfc009a083847341292517cf
+Cache Hit!
 endProcessing "com\xpgaming\PixelHunt\Config.java"
 
 startProcessing "com\xpgaming\PixelHunt\Enums\EnumItems.java" md5: 244f7adc0ce085cca5845ada2dd0e92b
@@ -30,9 +32,10 @@ startProcessing "com\xpgaming\PixelHunt\Listeners\PixelmonSpawnListener.java" md
 Cache Hit!
 endProcessing "com\xpgaming\PixelHunt\Listeners\PixelmonSpawnListener.java"
 
-startProcessing "com\xpgaming\PixelHunt\Main.java" md5: e6e048675e1b7ec7a6bd6a9399a892da
+startProcessing "com\xpgaming\PixelHunt\Main.java" md5: 76fd3249a84a375488ab46e13a504e1a
 endProcessing "com\xpgaming\PixelHunt\Main.java"
 
 startProcessing "com\xpgaming\PixelHunt\Utils.java" md5: dc54b8515be77a8bbc3bcd97c5d8b18c
+Cache Hit!
 endProcessing "com\xpgaming\PixelHunt\Utils.java"
 

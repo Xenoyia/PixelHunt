@@ -209,8 +209,8 @@ public class Main {
 		Sponge.getEventManager().registerListeners(this, new PixelmonSpawnListener());
 		Pixelmon.EVENT_BUS.register(new CaptureListener());
 		//Sponge.getCommandManager().register(this, newhunt, "newhunt", "nh");
-		consoleMsg("§f[§6PixelHunt§f] §ePixelHunt - Loaded v0.8!");
-		consoleMsg("§f[§6PixelHunt§f] §eBy xP// Xenoyia!");
+		consoleMsg("§f[§6xP//§f] §ePixelHunt - Loaded v0.8!");
+		consoleMsg("§f[§6xP//§f] §eBy Xenoyia with help from FrostEffects and XpanD!");
 	}
 
 	public void reloadAnnouncementTask() {
