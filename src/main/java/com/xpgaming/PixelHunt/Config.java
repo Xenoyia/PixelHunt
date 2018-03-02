@@ -45,6 +45,8 @@ public class Config {
             huntconfig.getNode("general","uncommon-pokemon-timer-min").setValue("12");
             huntconfig.getNode("general","rare-pokemon-timer-max").setValue("84");
             huntconfig.getNode("general","rare-pokemon-timer-min").setValue("168");
+            huntconfig.getNode("general","show-more-info").setComment("Should the 'more info' section in /hunt be shown?");
+            huntconfig.getNode("general","show-more-info").setValue(true);
             huntconfig.getNode("rewards","increase-ivs").setComment("Should hunted Pokémon with incorrect natures get increased IVs?");
             huntconfig.getNode("rewards","increase-ivs").setValue(true);
             huntconfig.getNode("rewards","max-ivs").setComment("Should hunted Pokémon with correct natures get their best IV maxed?");
@@ -61,12 +63,16 @@ public class Config {
             huntconfig.getNode("rewards","uncommon-money-max").setValue(3500);
             huntconfig.getNode("rewards","rare-money-min").setValue(5000);
             huntconfig.getNode("rewards","rare-money-max").setValue(7500);
+            huntconfig.getNode("rewards","give-candy").setComment("Should rare candies be given as a reward?");
+            huntconfig.getNode("rewards","give-candy").setValue(true);
             huntconfig.getNode("rewards","common-rarecandy-min").setValue(10);
             huntconfig.getNode("rewards","common-rarecandy-max").setValue(15);
             huntconfig.getNode("rewards","uncommon-rarecandy-min").setValue(15);
             huntconfig.getNode("rewards","uncommon-rarecandy-max").setValue(20);
             huntconfig.getNode("rewards","rare-rarecandy-min").setValue(20);
             huntconfig.getNode("rewards","rare-rarecandy-max").setValue(40);
+            huntconfig.getNode("rewards","give-balls").setComment("Should random Pokéballs be given as a reward?");
+            huntconfig.getNode("rewards","give-balls").setValue(true);
             huntconfig.getNode("rewards","common-balls-min").setValue(10);
             huntconfig.getNode("rewards","common-balls-max").setValue(15);
             huntconfig.getNode("rewards","uncommon-balls-min").setValue(15);

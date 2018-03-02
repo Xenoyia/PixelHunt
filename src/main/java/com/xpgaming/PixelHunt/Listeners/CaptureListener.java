@@ -25,8 +25,8 @@ public class CaptureListener {
                     int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                     pl.sendMessage(Text.of(Utils.prefix()+" \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 }
-                Main.getInstance().giveItemStack(Main.pokemon1ballReward, pl);
-                Main.getInstance().giveItemStack(Main.pokemon1rc, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon1ballReward, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon1rc, pl);
                 if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon1moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon1moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(1);
@@ -38,8 +38,8 @@ public class CaptureListener {
                     int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                     pl.sendMessage(Text.of(Utils.prefix()+" \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 }
-                Main.getInstance().giveItemStack(Main.pokemon1ballReward, pl);
-                Main.getInstance().giveItemStack(Main.pokemon1rc, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon1ballReward, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon1rc, pl);
                 if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon1moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon1moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(1);
@@ -51,8 +51,8 @@ public class CaptureListener {
                     int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                     pl.sendMessage(Text.of(Utils.prefix()+" \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 }
-                Main.getInstance().giveItemStack(Main.pokemon1ballReward, pl);
-                Main.getInstance().giveItemStack(Main.pokemon1rc, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon1ballReward, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon1rc, pl);
                 if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon1moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon1moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(1);
@@ -69,8 +69,8 @@ public class CaptureListener {
                     int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                     pl.sendMessage(Text.of(Utils.prefix()+" \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 }
-                Main.getInstance().giveItemStack(Main.pokemon2ballReward, pl);
-                Main.getInstance().giveItemStack(Main.pokemon2rc, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon2ballReward, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon2rc, pl);
                 if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon2moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon2moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(2);
@@ -82,8 +82,8 @@ public class CaptureListener {
                     int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                     pl.sendMessage(Text.of(Utils.prefix()+" \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 }
-                Main.getInstance().giveItemStack(Main.pokemon2ballReward, pl);
-                Main.getInstance().giveItemStack(Main.pokemon2rc, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon2ballReward, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon2rc, pl);
                 if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon2moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon2moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(2);
@@ -95,8 +95,8 @@ public class CaptureListener {
                     int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                     pl.sendMessage(Text.of(Utils.prefix()+" \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 }
-                Main.getInstance().giveItemStack(Main.pokemon2ballReward, pl);
-                Main.getInstance().giveItemStack(Main.pokemon2rc, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon2ballReward, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon2rc, pl);
                 if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon2moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon2moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(2);
@@ -113,8 +113,8 @@ public class CaptureListener {
                     int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                     pl.sendMessage(Text.of(Utils.prefix()+" \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 }
-                Main.getInstance().giveItemStack(Main.pokemon3ballReward, pl);
-                Main.getInstance().giveItemStack(Main.pokemon3rc, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon3ballReward, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon3rc, pl);
                 if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon3moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon3moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(3);
@@ -126,8 +126,8 @@ public class CaptureListener {
                     int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                     pl.sendMessage(Text.of(Utils.prefix()+" \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 }
-                Main.getInstance().giveItemStack(Main.pokemon3ballReward, pl);
-                Main.getInstance().giveItemStack(Main.pokemon3rc, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon3ballReward, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon3rc, pl);
                 if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon3moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon3moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(3);
@@ -139,8 +139,8 @@ public class CaptureListener {
                     int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                     pl.sendMessage(Text.of(Utils.prefix()+" \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 }
-                Main.getInstance().giveItemStack(Main.pokemon3ballReward, pl);
-                Main.getInstance().giveItemStack(Main.pokemon3rc, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon3ballReward, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon3rc, pl);
                 if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon3moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon3moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(3);
@@ -157,8 +157,8 @@ public class CaptureListener {
                     int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                     pl.sendMessage(Text.of(Utils.prefix()+" \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 }
-                Main.getInstance().giveItemStack(Main.pokemon4ballReward, pl);
-                Main.getInstance().giveItemStack(Main.pokemon4rc, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon4ballReward, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon4rc, pl);
                 if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon4moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon4moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(4);
@@ -170,8 +170,8 @@ public class CaptureListener {
                     int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                     pl.sendMessage(Text.of(Utils.prefix()+" \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 }
-                Main.getInstance().giveItemStack(Main.pokemon4ballReward, pl);
-                Main.getInstance().giveItemStack(Main.pokemon4rc, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon4ballReward, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon4rc, pl);
                 if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon4moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon4moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(4);
@@ -183,8 +183,8 @@ public class CaptureListener {
                     int newIVs = event.getPokemon().stats.IVs.SpAtt + event.getPokemon().stats.IVs.HP + event.getPokemon().stats.IVs.SpDef + event.getPokemon().stats.IVs.Defence + event.getPokemon().stats.IVs.Speed + event.getPokemon().stats.IVs.Attack;
                     pl.sendMessage(Text.of(Utils.prefix()+" \u00A7fIVs changed from \u00A7a"+oldIVs+" \u00A7fto \u00A7a"+newIVs+"\u00A7f!"));
                 }
-                Main.getInstance().giveItemStack(Main.pokemon4ballReward, pl);
-                Main.getInstance().giveItemStack(Main.pokemon4rc, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon4ballReward, pl);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon4rc, pl);
                 if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon4moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon4moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(4);
@@ -200,7 +200,6 @@ public class CaptureListener {
         double multiplier = Config.getInstance().getConfig().getNode("pixelhunt","rewards","iv-multiplier").getDouble();
         if(Utils.getUncommonPokemon().contains(e.getName()) || Utils.getRarePokemon().contains(e.getName())) multiplier = Config.getInstance().getConfig().getNode("pixelhunt","rewards","rare-iv-multiplier").getDouble();
         Integer natureNum = e.getNature().index;
-        System.out.println(natureNum);
         e.stats.IVs.HP = (int)Math.ceil(e.stats.IVs.HP*multiplier);
         if(e.stats.IVs.HP > 31) e.stats.IVs.HP = 31;
         e.stats.IVs.Attack = (int)Math.ceil(e.stats.IVs.Attack*multiplier);

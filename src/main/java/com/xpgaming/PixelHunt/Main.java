@@ -56,7 +56,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-@Plugin(id = Main.id, name = Main.name, version = "0.8",
+@Plugin(id = Main.id, name = Main.name, version = "0.9",
 		dependencies = {
 				@Dependency(id = "pixelmon")
 		})
@@ -186,6 +186,7 @@ public class Main {
 	
 	@Listener(beforeModifications = true)
 	public void onGameInitialization(GameInitializationEvent event) {
+		reloadAnnouncementTask();
 		instance = this;
 		if (!initialised) {
 			Utils.getInstance().initialisePokemon();
@@ -209,7 +210,7 @@ public class Main {
 		Sponge.getEventManager().registerListeners(this, new PixelmonSpawnListener());
 		Pixelmon.EVENT_BUS.register(new CaptureListener());
 		//Sponge.getCommandManager().register(this, newhunt, "newhunt", "nh");
-		consoleMsg("§f[§6xP//§f] §ePixelHunt - Loaded v0.8!");
+		consoleMsg("§f[§6xP//§f] §ePixelHunt - Loaded v0.9!");
 		consoleMsg("§f[§6xP//§f] §eBy Xenoyia with help from FrostEffects and XpanD!");
 	}
 
