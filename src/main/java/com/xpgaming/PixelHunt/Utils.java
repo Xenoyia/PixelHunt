@@ -188,7 +188,8 @@ public class Utils {
     }
 
     public void startTimer(int slot) {
-        int min = Config.getInstance().getConfig().getNode("pixelhunt","general","common-pokemon-timer-min").getInt(), max = Config.getInstance().getConfig().getNode("pixelhunt","general","common-pokemon-timer-max").getInt();
+        int min = Config.getInstance().getConfig().getNode("pixelhunt","general","common-pokemon-timer-min").getInt();
+        int max = Config.getInstance().getConfig().getNode("pixelhunt","general","common-pokemon-timer-max").getInt();
         int hours = random.nextInt(max - min + 1) + min;
         LocalDateTime date = LocalDateTime.now();
         switch (slot) {
@@ -196,12 +197,13 @@ public class Utils {
                 cancelTimers(1);
                 if(getUncommonPokemon().contains(Main.pokemon1)) {
                     min = Config.getInstance().getConfig().getNode("pixelhunt","general","uncommon-pokemon-timer-min").getInt();
-                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","uncommon-pokemon-timer-min").getInt();
+                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","uncommon-pokemon-timer-max").getInt();
                 } else if(Utils.getRarePokemon().contains(Main.pokemon1)) {
                     min = Config.getInstance().getConfig().getNode("pixelhunt","general","rare-pokemon-timer-min").getInt();
-                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","rare-pokemon-timer-min").getInt();
+                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","rare-pokemon-timer-max").getInt();
                 }
                 hours = random.nextInt(max - min + 1) + min;
+                if(min == max) hours = max;
                 date = date.plusHours(hours);
                 Main.pokemon1expiry = date;
                 Task task = Task.builder().execute(() -> {
@@ -218,13 +220,14 @@ public class Utils {
                 cancelTimers(2);
                 if(getUncommonPokemon().contains(Main.pokemon2)) {
                     min = Config.getInstance().getConfig().getNode("pixelhunt","general","uncommon-pokemon-timer-min").getInt();
-                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","uncommon-pokemon-timer-min").getInt();
+                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","uncommon-pokemon-timer-max").getInt();
                 } else if(Utils.getRarePokemon().contains(Main.pokemon2)) {
                     min = Config.getInstance().getConfig().getNode("pixelhunt","general","rare-pokemon-timer-min").getInt();
-                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","rare-pokemon-timer-min").getInt();
+                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","rare-pokemon-timer-max").getInt();
                 }
                 hours = random.nextInt(max - min + 1) + min;
                 date = date.plusHours(hours);
+                if(min == max) hours = max;
                 Main.pokemon2expiry = date;
                 Task task2 = Task.builder().execute(() -> {
                     Sponge.getServer().getBroadcastChannel().send(Text.of(prefix()+ " The hunt for \u00A7a" + Main.pokemon2 + " \u00A7fhas ended!"));
@@ -239,12 +242,13 @@ public class Utils {
                 cancelTimers(3);
                 if(getUncommonPokemon().contains(Main.pokemon3)) {
                     min = Config.getInstance().getConfig().getNode("pixelhunt","general","uncommon-pokemon-timer-min").getInt();
-                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","uncommon-pokemon-timer-min").getInt();
+                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","uncommon-pokemon-timer-max").getInt();
                 } else if(Utils.getRarePokemon().contains(Main.pokemon3)) {
                     min = Config.getInstance().getConfig().getNode("pixelhunt","general","rare-pokemon-timer-min").getInt();
-                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","rare-pokemon-timer-min").getInt();
+                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","rare-pokemon-timer-max").getInt();
                 }
                 hours = random.nextInt(max - min + 1) + min;
+                if(min == max) hours = max;
                 date = date.plusHours(hours);
                 Main.pokemon3expiry = date;
                 Task task3 = Task.builder().execute(() -> {
@@ -260,12 +264,13 @@ public class Utils {
                 cancelTimers(4);
                 if(getUncommonPokemon().contains(Main.pokemon4)) {
                     min = Config.getInstance().getConfig().getNode("pixelhunt","general","uncommon-pokemon-timer-min").getInt();
-                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","uncommon-pokemon-timer-min").getInt();
+                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","uncommon-pokemon-timer-max").getInt();
                 } else if(Utils.getRarePokemon().contains(Main.pokemon4)) {
                     min = Config.getInstance().getConfig().getNode("pixelhunt","general","rare-pokemon-timer-min").getInt();
-                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","rare-pokemon-timer-min").getInt();
+                    max = Config.getInstance().getConfig().getNode("pixelhunt","general","rare-pokemon-timer-max").getInt();
                 }
                 hours = random.nextInt(max - min + 1) + min;
+                if(min == max) hours = max;
                 date = date.plusHours(hours);
                 Main.pokemon4expiry = date;
                 Task task4 = Task.builder().execute(() -> {
