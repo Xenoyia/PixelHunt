@@ -20,7 +20,7 @@ apply plugin: "org.spongepowered.plugin"
 
 group = modGroup
 archivesBaseName = modBaseName
-version = "1.0-MC${project.minecraftVersion}-F${project.forgeBuild}-S${project.spongeAPIVersion.split("-")[0]}"
+version = "0.9-Hotfix-MC${project.minecraftVersion}-F${project.forgeBuild}-S${project.spongeAPIVersion.split("-")[0]}"
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
