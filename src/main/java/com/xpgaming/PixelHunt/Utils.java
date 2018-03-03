@@ -13,10 +13,7 @@ import java.math.BigDecimal;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class Utils {
@@ -29,8 +26,12 @@ public class Utils {
         switch(slot) {
             case 1:
                 cancelTimers(1);
-                Main.pokemon1 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
-                while(getExcludedPokemon().contains(Main.pokemon1)) Main.pokemon1 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon1 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+                else Main.pokemon1 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+                while(getExcludedPokemon().contains(Main.pokemon1)) {
+                    if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon1 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+                    else Main.pokemon1 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+                }
                 Main.nature1 = randomEnum(EnumNature.class).toString();
                 Main.nature1b = randomEnum(EnumNature.class).toString();
                 while(Main.nature1b.equalsIgnoreCase(Main.nature1)) Main.nature1b = randomEnum(EnumNature.class).toString();
@@ -41,20 +42,27 @@ public class Utils {
                 if(getUncommonPokemon().contains(Main.pokemon1)) {
                     Main.pokemon1ballReward = randomBall(1, 1);
                     Main.pokemon1moneyReward = randomMoney(1);
+                    Main.pokemon1msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-uncommon-msg").getString();
                 } else if(Utils.getRarePokemon().contains(Main.pokemon1)) {
                     Main.pokemon1rc = randomRareCandy(2);
                     Main.pokemon1ballReward = randomBall(1, 2);
                     Main.pokemon1moneyReward = randomMoney(2);
+                    Main.pokemon1msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-rare-msg").getString();
                 } else {
                     Main.pokemon1ballReward = randomBall(1, 0);
                     Main.pokemon1moneyReward = randomMoney(0);
+                    Main.pokemon1msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-common-msg").getString();
                 }
                 startTimer(1);
                 break;
             case 2:
                 cancelTimers(2);
-                Main.pokemon2 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
-                while(getExcludedPokemon().contains(Main.pokemon2)) Main.pokemon2 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon2 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+                else Main.pokemon2 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+                while(getExcludedPokemon().contains(Main.pokemon2)) {
+                    if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon2 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+                    else Main.pokemon2 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+                }
                 Main.nature2 = randomEnum(EnumNature.class).toString();
                 Main.nature2b = randomEnum(EnumNature.class).toString();
                 while(Main.nature2b.equalsIgnoreCase(Main.nature2)) Main.nature2b = randomEnum(EnumNature.class).toString();
@@ -65,20 +73,27 @@ public class Utils {
                 if(getUncommonPokemon().contains(Main.pokemon2)) {
                     Main.pokemon2ballReward = randomBall(2, 1);
                     Main.pokemon2moneyReward = randomMoney(1);
+                    Main.pokemon2msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-uncommon-msg").getString();
                 } else if(Utils.getRarePokemon().contains(Main.pokemon2)) {
                     Main.pokemon2rc = randomRareCandy(2);
                     Main.pokemon2ballReward = randomBall(2, 2);
                     Main.pokemon2moneyReward = randomMoney(2);
+                    Main.pokemon2msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-rare-msg").getString();
                 } else {
                     Main.pokemon2ballReward = randomBall(2, 0);
                     Main.pokemon2moneyReward = randomMoney(0);
+                    Main.pokemon2msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-common-msg").getString();
                 }
                 startTimer(2);
                 break;
             case 3:
                 cancelTimers(3);
-                Main.pokemon3 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
-                while(getExcludedPokemon().contains(Main.pokemon3)) Main.pokemon3 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon3 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+                else Main.pokemon3 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+                while(getExcludedPokemon().contains(Main.pokemon3)) {
+                    if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon3 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+                    else Main.pokemon3 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+                }
                 Main.nature3 = randomEnum(EnumNature.class).toString();
                 Main.nature3b = randomEnum(EnumNature.class).toString();
                 while(Main.nature3b.equalsIgnoreCase(Main.nature3)) Main.nature3b = randomEnum(EnumNature.class).toString();
@@ -89,20 +104,27 @@ public class Utils {
                 if(getUncommonPokemon().contains(Main.pokemon3)) {
                     Main.pokemon3ballReward = randomBall(3, 1);
                     Main.pokemon3moneyReward = randomMoney(1);
+                    Main.pokemon3msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-uncommon-msg").getString();
                 } else if(Utils.getRarePokemon().contains(Main.pokemon3)) {
                     Main.pokemon3rc = randomRareCandy(2);
                     Main.pokemon3ballReward = randomBall(3, 2);
                     Main.pokemon3moneyReward = randomMoney(2);
+                    Main.pokemon3msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-rare-msg").getString();
                 } else {
                     Main.pokemon3ballReward = randomBall(3, 0);
                     Main.pokemon3moneyReward = randomMoney(0);
+                    Main.pokemon3msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-common-msg").getString();
                 }
                 startTimer(3);
                 break;
             case 4:
                 cancelTimers(4);
-                Main.pokemon4 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
-                while(getExcludedPokemon().contains(Main.pokemon4)) Main.pokemon4 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+                if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon4 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+                else Main.pokemon4 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+                while(getExcludedPokemon().contains(Main.pokemon4)) {
+                    if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon4 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+                    else Main.pokemon4 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+                }
                 Main.nature4 = randomEnum(EnumNature.class).toString();
                 Main.nature4b = randomEnum(EnumNature.class).toString();
                 while(Main.nature4b.equalsIgnoreCase(Main.nature4)) Main.nature4b = randomEnum(EnumNature.class).toString();
@@ -113,15 +135,18 @@ public class Utils {
                 if(getUncommonPokemon().contains(Main.pokemon4)) {
                     Main.pokemon4ballReward = randomBall(4, 1);
                     Main.pokemon4moneyReward = randomMoney(1);
+                    Main.pokemon4msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-uncommon-msg").getString();
                 }
                 else if(Utils.getRarePokemon().contains(Main.pokemon4)) {
                     Main.pokemon4rc = randomRareCandy(2);
                     Main.pokemon4ballReward = randomBall(4, 2);
                     Main.pokemon4moneyReward = randomMoney(2);
+                    Main.pokemon4msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-rare-msg").getString();
                 }
                 else {
                     Main.pokemon4ballReward = randomBall(4, 0);
                     Main.pokemon4moneyReward = randomMoney(0);
+                    Main.pokemon4msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-common-msg").getString();
                 }
                 startTimer(4);
                 break;
@@ -302,10 +327,24 @@ public class Utils {
         }
     }
 
+    public int getRarity(String name) {
+        if(getUncommonPokemon().contains(name)) {
+            return 1;
+        } else if(getRarePokemon().contains(name)) {
+            return 2;
+        } else {
+            return 0;
+        }
+    }
+
     public void initialisePokemon() {
         cancelTimers(0);
-        Main.pokemon1 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
-        while(getExcludedPokemon().contains(Main.pokemon1)) Main.pokemon1 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+        if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon1 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+        else Main.pokemon1 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+        while(getExcludedPokemon().contains(Main.pokemon1)) {
+            if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon1 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+            else Main.pokemon1 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+        }
         Main.nature1 = randomEnum(EnumNature.class).toString();
         Main.nature1b = randomEnum(EnumNature.class).toString();
         while(Main.nature1b.equalsIgnoreCase(Main.nature1)) Main.nature1b = randomEnum(EnumNature.class).toString();
@@ -313,18 +352,25 @@ public class Utils {
         while(Main.nature1c.equalsIgnoreCase(Main.nature1b) || Main.nature1c.equalsIgnoreCase(Main.nature1)) Main.nature1c = randomEnum(EnumNature.class).toString();
         Main.pokemon1ballReward = randomBall(1, 0);
         Main.pokemon1moneyReward = randomMoney(0);
+        Main.pokemon1msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-common-msg").getString();
         if(getUncommonPokemon().contains(Main.pokemon1)) {
             Main.pokemon1moneyReward = randomMoney(1);
             Main.pokemon1rc = randomRareCandy(1);
+            Main.pokemon1msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-uncommon-msg").getString();
         }
         else if(Utils.getRarePokemon().contains(Main.pokemon1)) {
             Main.pokemon1moneyReward = randomMoney(2);
             Main.pokemon1rc = randomRareCandy(2);
+            Main.pokemon1msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-rare-msg").getString();
         }
         else Main.pokemon1rc = randomRareCandy(0);
         startTimer(1);
-        Main.pokemon2 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
-        while(getExcludedPokemon().contains(Main.pokemon2)) Main.pokemon2 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+        if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon2 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+        else Main.pokemon2 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+        while(getExcludedPokemon().contains(Main.pokemon2)) {
+            if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon2 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+            else Main.pokemon2 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+        }
         Main.nature2 = randomEnum(EnumNature.class).toString();
         Main.nature2b = randomEnum(EnumNature.class).toString();
         while(Main.nature2b.equalsIgnoreCase(Main.nature2)) Main.nature2b = randomEnum(EnumNature.class).toString();
@@ -332,18 +378,25 @@ public class Utils {
         while(Main.nature2c.equalsIgnoreCase(Main.nature2b) || Main.nature2c.equalsIgnoreCase(Main.nature2)) Main.nature2c = randomEnum(EnumNature.class).toString();
         Main.pokemon2ballReward = randomBall(2, 0);
         Main.pokemon2moneyReward = randomMoney(0);
+        Main.pokemon2msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-common-msg").getString();
         if(getUncommonPokemon().contains(Main.pokemon2)) {
             Main.pokemon2moneyReward = randomMoney(1);
             Main.pokemon2rc = randomRareCandy(1);
+            Main.pokemon2msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-uncommon-msg").getString();
         }
         else if(Utils.getRarePokemon().contains(Main.pokemon2)) {
             Main.pokemon2moneyReward = randomMoney(2);
             Main.pokemon2rc = randomRareCandy(2);
+            Main.pokemon2msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-rare-msg").getString();
         }
         else Main.pokemon2rc = randomRareCandy(0);
         startTimer(2);
-        Main.pokemon3 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
-        while(getExcludedPokemon().contains(Main.pokemon3)) Main.pokemon3 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+        if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon3 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+        else Main.pokemon3 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+        while(getExcludedPokemon().contains(Main.pokemon3)) {
+            if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon3 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+            else Main.pokemon3 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+        }
         Main.nature3 = randomEnum(EnumNature.class).toString();
         Main.nature3b = randomEnum(EnumNature.class).toString();
         while(Main.nature3b.equalsIgnoreCase(Main.nature3)) Main.nature3b = randomEnum(EnumNature.class).toString();
@@ -351,18 +404,25 @@ public class Utils {
         while(Main.nature3c.equalsIgnoreCase(Main.nature3b) || Main.nature3c.equalsIgnoreCase(Main.nature3)) Main.nature3c = randomEnum(EnumNature.class).toString();
         Main.pokemon3ballReward = randomBall(3, 0);
         Main.pokemon3moneyReward = randomMoney(0);
+        Main.pokemon3msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-common-msg").getString();
         if(getUncommonPokemon().contains(Main.pokemon3)) {
             Main.pokemon3moneyReward = randomMoney(1);
             Main.pokemon3rc = randomRareCandy(1);
+            Main.pokemon3msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-uncommon-msg").getString();
         }
         else if(Utils.getRarePokemon().contains(Main.pokemon3)) {
             Main.pokemon3moneyReward = randomMoney(2);
             Main.pokemon3rc = randomRareCandy(2);
+            Main.pokemon3msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-rare-msg").getString();
         }
         else Main.pokemon3rc = randomRareCandy(0);
         startTimer(3);
-        Main.pokemon4 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
-        while(getExcludedPokemon().contains(Main.pokemon4)) Main.pokemon4 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+        if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon4 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+        else Main.pokemon4 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+        while(getExcludedPokemon().contains(Main.pokemon4)) {
+            if(Config.getInstance().getConfig().getNode("pixelhunt","general","allow-legendaries").getBoolean()) Main.pokemon4 = sanitisePokemon(EnumPokemon.randomPoke(true).name);
+            else Main.pokemon4 = sanitisePokemon(EnumPokemon.randomPoke(false).name);
+        }
         Main.nature4 = randomEnum(EnumNature.class).toString();
         Main.nature4b = randomEnum(EnumNature.class).toString();
         while(Main.nature4b.equalsIgnoreCase(Main.nature4)) Main.nature4b = randomEnum(EnumNature.class).toString();
@@ -370,13 +430,16 @@ public class Utils {
         while(Main.nature4c.equalsIgnoreCase(Main.nature4b) || Main.nature4c.equalsIgnoreCase(Main.nature4)) Main.nature4c = randomEnum(EnumNature.class).toString();
         Main.pokemon4ballReward = randomBall(4, 0);
         Main.pokemon4moneyReward = randomMoney(0);
+        Main.pokemon4msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-common-msg").getString();
         if(getUncommonPokemon().contains(Main.pokemon4)) {
             Main.pokemon4moneyReward = randomMoney(1);
             Main.pokemon4rc = randomRareCandy(1);
+            Main.pokemon4msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-uncommon-msg").getString();
         }
         else if(Utils.getRarePokemon().contains(Main.pokemon4)) {
             Main.pokemon4moneyReward = randomMoney(2);
             Main.pokemon4rc = randomRareCandy(2);
+            Main.pokemon4msg = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-rare-msg").getString();
         }
         else Main.pokemon4rc = randomRareCandy(0);
         startTimer(4);
@@ -397,6 +460,41 @@ public class Utils {
             return total;
         } else {
             return BigDecimal.valueOf(0);
+        }
+    }
+
+    public void executeCommand(int rarity, String name) {
+        List<String> cmd1list = new ArrayList<>();
+        List<String> cmd2list = new ArrayList<>();
+        List<String> cmd3list = new ArrayList<>();
+        String cmd1 = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-common-cmd").getString().replace("%player%", name);
+        String cmd2 = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-uncommon-cmd").getString().replace("%player%", name);
+        String cmd3 = Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-rare-cmd").getString().replace("%player%", name);
+
+        if(rarity == 1) {
+            if(cmd2.contains(";")) cmd2list = Arrays.asList(cmd2.split("\\s*;\\s*"));
+            else cmd2list.add(cmd2);
+
+            for(String command : cmd2list) {
+                Sponge.getCommandManager().process(Sponge.getServer().getConsole(), command);
+            }
+
+        } else if(rarity == 2) {
+            if(cmd3.contains(";")) cmd3list = Arrays.asList(cmd3.split("\\s*;\\s*"));
+            else cmd2list.add(cmd3);
+
+            for(String command : cmd3list) {
+                Sponge.getCommandManager().process(Sponge.getServer().getConsole(), command);
+            }
+
+        } else {
+            if(cmd1.contains(";")) cmd1list = Arrays.asList(cmd1.split("\\s*;\\s*"));
+            else cmd1list.add(cmd1);
+
+            for(String command : cmd1list) {
+                Sponge.getCommandManager().process(Sponge.getServer().getConsole(), command);
+            }
+
         }
     }
 
