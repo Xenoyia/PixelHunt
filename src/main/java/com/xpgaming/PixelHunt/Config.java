@@ -67,6 +67,8 @@ public class Config {
             huntconfig.getNode("rewards","rare-money-max").setValue(7500);
             huntconfig.getNode("rewards","give-candy").setComment("Should rare candies be given as a reward?");
             huntconfig.getNode("rewards","give-candy").setValue(true);
+            huntconfig.getNode("rewards","give-money").setComment("Should economy be involved?");
+            huntconfig.getNode("rewards","give-money").setValue(true);
             huntconfig.getNode("rewards","common-rarecandy-min").setValue(10);
             huntconfig.getNode("rewards","common-rarecandy-max").setValue(15);
             huntconfig.getNode("rewards","uncommon-rarecandy-min").setValue(15);

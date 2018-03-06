@@ -481,7 +481,7 @@ public class Utils {
 
         } else if(rarity == 2) {
             if(cmd3.contains(";")) cmd3list = Arrays.asList(cmd3.split("\\s*;\\s*"));
-            else cmd2list.add(cmd3);
+            else cmd3list.add(cmd3);
 
             for(String command : cmd3list) {
                 Sponge.getCommandManager().process(Sponge.getServer().getConsole(), command);

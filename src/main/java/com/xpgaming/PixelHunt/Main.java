@@ -56,7 +56,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-@Plugin(id = Main.id, name = Main.name, version = "1.0",
+@Plugin(id = Main.id, name = Main.name, version = "1.1",
 		dependencies = {
 				@Dependency(id = "pixelmon")
 		})
@@ -122,6 +122,7 @@ public class Main {
 			economyService = fakeEconomy.get();
 			hasEconomy = true;
 			consoleMsg("§f[§6PixelHunt§f] §eEconomy loaded!");
+			Utils.getInstance().initialisePokemon();
 		} else {
 			hasEconomy = false;
 			consoleMsg("§f[§6PixelHunt§f] §eEconomy not found!");
@@ -211,7 +212,7 @@ public class Main {
 		Sponge.getEventManager().registerListeners(this, new PixelmonSpawnListener());
 		Pixelmon.EVENT_BUS.register(new CaptureListener());
 		//Sponge.getCommandManager().register(this, newhunt, "newhunt", "nh");
-		consoleMsg("§f[§6xP//§f] §ePixelHunt - Loaded v1.0!");
+		consoleMsg("§f[§6xP//§f] §ePixelHunt - Loaded v1.1!");
 		consoleMsg("§f[§6xP//§f] §eBy Xenoyia with help from happyzlife, FrostEffects and XpanD!");
 	}
 

@@ -1,5 +1,6 @@
 package com.xpgaming.PixelHunt.Commands;
 
+import com.xpgaming.PixelHunt.Config;
 import com.xpgaming.PixelHunt.Main;
 import com.xpgaming.PixelHunt.Utils;
 import org.spongepowered.api.command.CommandException;
@@ -18,6 +19,67 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hunt implements CommandExecutor {
+
+    public String rewardList(int num) {
+        String strList = "";
+        if(num == 1) {
+            if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean())
+                strList = "\u00A7dBalls: \u00A7f" + Main.pokemon1ballReward.getQuantity();
+
+            if(Main.hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean())
+                strList = strList + "\n\u00A72Money: \u00A7f" + Main.pokemon1moneyReward;
+
+            if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean())
+                strList = strList + "\n\u00A73Rare Candies: \u00A7f" + Main.pokemon1rc.getQuantity();
+
+            if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean())
+                strList = strList + "\n\u00A74Other: \u00A7f" + Main.pokemon1msg;
+        }
+        else if(num == 2) {
+            if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean())
+                strList = "\u00A7dBalls: \u00A7f" + Main.pokemon2ballReward.getQuantity();
+
+            if(Main.hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean())
+                strList = strList + "\n\u00A72Money: \u00A7f" + Main.pokemon2moneyReward;
+
+            if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean())
+                strList = strList + "\n\u00A73Rare Candies: \u00A7f" + Main.pokemon2rc.getQuantity();
+
+            if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean())
+                strList = strList + "\n\u00A74Other: \u00A7f" + Main.pokemon2msg;
+        }
+        else if(num == 3) {
+            if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean())
+                strList = "\u00A7dBalls: \u00A7f" + Main.pokemon3ballReward.getQuantity();
+
+            if(Main.hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean())
+                strList = strList + "\n\u00A72Money: \u00A7f" + Main.pokemon3moneyReward;
+
+            if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean())
+                strList = strList + "\n\u00A73Rare Candies: \u00A7f" + Main.pokemon3rc.getQuantity();
+
+            if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean())
+                strList = strList + "\n\u00A74Other: \u00A7f" + Main.pokemon3msg;
+        }
+        else if(num == 4) {
+            if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean())
+                strList = "\u00A7dBalls: \u00A7f" + Main.pokemon4ballReward.getQuantity();
+
+            if(Main.hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean())
+                strList = strList + "\n\u00A72Money: \u00A7f" + Main.pokemon4moneyReward;
+
+            if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean())
+                strList = strList + "\n\u00A73Rare Candies: \u00A7f" + Main.pokemon4rc.getQuantity();
+
+            if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean())
+                strList = strList + "\n\u00A74Other: \u00A7f" + Main.pokemon4msg;
+        } else {
+            strList = "Error!";
+        }
+
+        return strList;
+    }
+
     public CommandResult execute(CommandSource src, CommandContext args) throws CommandException {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YY (HH:mm:ss)");
         LocalDateTime timeNow = LocalDateTime.now();
@@ -32,7 +94,7 @@ public class Hunt implements CommandExecutor {
         Text hoverb1 = Text.builder()
                 .color(TextColors.DARK_GRAY)
                 .append(Text.of("[\u00A7eRewards\u00A78]"))
-                .onHover(TextActions.showText(Text.of("\u00A7dBalls: \u00A7f" + Main.pokemon1ballReward.getQuantity() + " " + Main.pokemon1ballName + "\n\u00A72Money: \u00A7f" + Main.pokemon1moneyReward + " coins\n\u00A73Rare Candies: \u00A7f" + Main.pokemon1rc.getQuantity())))// + "\n\u00A76IVs: \u00A7f" + IVUpgrade(EnumNature.natureFromString(Main.nature1).index))))
+                .onHover(TextActions.showText(Text.of(rewardList(1))))// + "\n\u00A76IVs: \u00A7f" + IVUpgrade(EnumNature.natureFromString(Main.nature1).index))))
                 .build();
         Text hoverc1 = Text.builder()
                 .color(TextColors.DARK_GRAY)
@@ -58,7 +120,7 @@ public class Hunt implements CommandExecutor {
         Text hoverb2 = Text.builder()
                 .color(TextColors.DARK_GRAY)
                 .append(Text.of("[\u00A7eRewards\u00A78]"))
-                .onHover(TextActions.showText(Text.of("\u00A7dBalls: \u00A7f" + Main.pokemon2ballReward.getQuantity() + " " + Main.pokemon2ballName + "\n\u00A72Money: \u00A7f" + Main.pokemon2moneyReward + " coins\n\u00A73Rare Candies: \u00A7f" + Main.pokemon2rc.getQuantity())))// + "\n\u00A76IVs: \u00A7f" + IVUpgrade(EnumNature.natureFromString(Main.nature2).index))))
+                .onHover(TextActions.showText(Text.of(rewardList(2))))
                 .build();
         Text hoverc2 = Text.builder()
                 .color(TextColors.DARK_GRAY)
@@ -84,7 +146,7 @@ public class Hunt implements CommandExecutor {
         Text hoverb3 = Text.builder()
                 .color(TextColors.DARK_GRAY)
                 .append(Text.of("[\u00A7eRewards\u00A78]"))
-                .onHover(TextActions.showText(Text.of("\u00A7dBalls: \u00A7f" + Main.pokemon3ballReward.getQuantity() + " " + Main.pokemon3ballName + "\n\u00A72Money: \u00A7f" + Main.pokemon3moneyReward + " coins\n\u00A73Rare Candies: \u00A7f" + Main.pokemon3rc.getQuantity())))// + "\n\u00A76IVs: \u00A7f" + IVUpgrade(EnumNature.natureFromString(Main.nature3).index))))
+                .onHover(TextActions.showText(Text.of(rewardList(3))))
                 .build();
         Text hoverc3 = Text.builder()
                 .color(TextColors.DARK_GRAY)
@@ -110,7 +172,7 @@ public class Hunt implements CommandExecutor {
         Text hoverb4 = Text.builder()
                 .color(TextColors.DARK_GRAY)
                 .append(Text.of("[\u00A7eRewards\u00A78]"))
-                .onHover(TextActions.showText(Text.of("\u00A7dBalls: \u00A7f" + Main.pokemon4ballReward.getQuantity() + " " + Main.pokemon4ballName + "\n\u00A72Money: \u00A7f" + Main.pokemon4moneyReward + " coins\n\u00A73Rare Candies: \u00A7f" + Main.pokemon4rc.getQuantity())))// + "\n\u00A76IVs: \u00A7f" + IVUpgrade(EnumNature.natureFromString(Main.nature4).index))))
+                .onHover(TextActions.showText(Text.of(rewardList(4))))
                 .build();
         Text hoverc4 = Text.builder()
                 .color(TextColors.DARK_GRAY)
@@ -131,13 +193,13 @@ public class Hunt implements CommandExecutor {
         Text line5 = Text.builder()
                 .color(TextColors.DARK_GRAY)
                 .append(Text.of("[\u00A76More Info\u00A78]"))
-                .onHover(TextActions.showText(Text.of("\u00A7b\u00A7l     How does it work?\n\u00A78\u00A7m-----\u00A77\u00A7m-----\u00A7f\u00A7m-----\u00A77\u00A7m-----\u00A78\u00A7m-----\n\u00A7a  Any Pok\u00E9mon that's on this\n\u00A7a   list will receive an IV boost \n\u00A7a    when caught. If it has\n\u00A7a  one of the listed natures\n\u00A7a   you get rewards and an\n\u00A7a   even greater IV boost!\n\u00A78\u00A7m-----\u00A77\u00A7m-----\u00A7f\u00A7m-----\u00A77\u00A7m-----\u00A78\u00A7m-----")))
+                .onHover(TextActions.showText(Text.of("\u00A7b\u00A7l     How does it work?\n\u00A78\u00A7m-----\u00A77\u00A7m-----\u00A7f\u00A7m-----\u00A77\u00A7m-----\u00A78\u00A7m-----\n\u00A7a  Any Pok\u00E9mon that's on this\n\u00A7a list will receive an IV boost \n\u00A7a    when caught. If it has\n\u00A7a  one of the listed natures\n\u00A7a   you get rewards and an\n\u00A7a   even greater IV boost!\n\u00A78\u00A7m-----\u00A77\u00A7m-----\u00A7f\u00A7m-----\u00A77\u00A7m-----\u00A78\u00A7m-----")))
                 .build();
         contents.add(line1);
         contents.add(line2);
         contents.add(line3);
         contents.add(line4);
-        contents.add(line5);
+        if(Config.getInstance().getConfig().getNode("pixelhunt","general","show-more-info").getBoolean()) contents.add(line5);
         PaginationList.builder()
                 .title(Text.builder("Pixelmon Hunt").color(TextColors.WHITE).build())
                 .contents(contents)

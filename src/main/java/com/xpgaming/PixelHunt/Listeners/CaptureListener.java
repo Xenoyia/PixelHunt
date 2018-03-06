@@ -28,7 +28,7 @@ public class CaptureListener {
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon1ballReward, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon1rc, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean()) Utils.getInstance().executeCommand(Utils.getInstance().getRarity(Main.pokemon1), p.getName());
-                if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon1moneyReward);
+                if(Main.getInstance().hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean()) { Main.getInstance().addMoney(pl, Main.pokemon1moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon1moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(1);
                 Sponge.getServer().getBroadcastChannel().send(Text.of(Utils.prefix()+" \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon1));
@@ -42,7 +42,7 @@ public class CaptureListener {
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon1ballReward, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon1rc, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean()) Utils.getInstance().executeCommand(Utils.getInstance().getRarity(Main.pokemon1), p.getName());
-                if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon1moneyReward);
+                if(Main.getInstance().hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean()) { Main.getInstance().addMoney(pl, Main.pokemon1moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon1moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(1);
                 Sponge.getServer().getBroadcastChannel().send(Text.of(Utils.prefix()+" \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon1));
@@ -56,7 +56,7 @@ public class CaptureListener {
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon1ballReward, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon1rc, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean()) Utils.getInstance().executeCommand(Utils.getInstance().getRarity(Main.pokemon1), p.getName());
-                if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon1moneyReward);
+                if(Main.getInstance().hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean()) { Main.getInstance().addMoney(pl, Main.pokemon1moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon1moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(1);
                 Sponge.getServer().getBroadcastChannel().send(Text.of(Utils.prefix()+" \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon1));
@@ -75,7 +75,7 @@ public class CaptureListener {
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon2ballReward, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon2rc, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean()) Utils.getInstance().executeCommand(Utils.getInstance().getRarity(Main.pokemon2), p.getName());
-                if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon2moneyReward);
+                if(Main.getInstance().hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean()) { Main.getInstance().addMoney(pl, Main.pokemon2moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon2moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(2);
                 Sponge.getServer().getBroadcastChannel().send(Text.of(Utils.prefix()+" \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon2));
@@ -89,7 +89,7 @@ public class CaptureListener {
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon2ballReward, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon2rc, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean()) Utils.getInstance().executeCommand(Utils.getInstance().getRarity(Main.pokemon2), p.getName());
-                if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon2moneyReward);
+                if(Main.getInstance().hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean()) { Main.getInstance().addMoney(pl, Main.pokemon2moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon2moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(2);
                 Sponge.getServer().getBroadcastChannel().send(Text.of(Utils.prefix()+" \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon2));
@@ -103,7 +103,7 @@ public class CaptureListener {
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon2ballReward, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon2rc, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean()) Utils.getInstance().executeCommand(Utils.getInstance().getRarity(Main.pokemon2), p.getName());
-                if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon2moneyReward);
+                if(Main.getInstance().hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean()) { Main.getInstance().addMoney(pl, Main.pokemon2moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon2moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(2);
                 Sponge.getServer().getBroadcastChannel().send(Text.of(Utils.prefix()+" \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon2));
@@ -122,7 +122,7 @@ public class CaptureListener {
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon3ballReward, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon3rc, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean()) Utils.getInstance().executeCommand(Utils.getInstance().getRarity(Main.pokemon3), p.getName());
-                if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon3moneyReward);
+                if(Main.getInstance().hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean()) { Main.getInstance().addMoney(pl, Main.pokemon3moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon3moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(3);
                 Sponge.getServer().getBroadcastChannel().send(Text.of(Utils.prefix()+" \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon3));
@@ -136,7 +136,7 @@ public class CaptureListener {
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon3ballReward, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon3rc, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean()) Utils.getInstance().executeCommand(Utils.getInstance().getRarity(Main.pokemon3), p.getName());
-                if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon3moneyReward);
+                if(Main.getInstance().hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean()) { Main.getInstance().addMoney(pl, Main.pokemon3moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon3moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(3);
                 Sponge.getServer().getBroadcastChannel().send(Text.of(Utils.prefix()+" \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon3));
@@ -150,7 +150,7 @@ public class CaptureListener {
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon3ballReward, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon3rc, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean()) Utils.getInstance().executeCommand(Utils.getInstance().getRarity(Main.pokemon3), p.getName());
-                if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon3moneyReward);
+                if(Main.getInstance().hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean()) { Main.getInstance().addMoney(pl, Main.pokemon3moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon3moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(3);
                 Sponge.getServer().getBroadcastChannel().send(Text.of(Utils.prefix()+" \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon3));
@@ -169,7 +169,7 @@ public class CaptureListener {
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon4ballReward, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon4rc, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean()) Utils.getInstance().executeCommand(Utils.getInstance().getRarity(Main.pokemon4), p.getName());
-                if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon4moneyReward);
+                if(Main.getInstance().hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean()) { Main.getInstance().addMoney(pl, Main.pokemon4moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon4moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(4);
                 Sponge.getServer().getBroadcastChannel().send(Text.of(Utils.prefix()+" \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon4));
@@ -183,7 +183,7 @@ public class CaptureListener {
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon4ballReward, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon4rc, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean()) Utils.getInstance().executeCommand(Utils.getInstance().getRarity(Main.pokemon4), p.getName());
-                if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon4moneyReward);
+                if(Main.getInstance().hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean()) { Main.getInstance().addMoney(pl, Main.pokemon4moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon4moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(4);
                 Sponge.getServer().getBroadcastChannel().send(Text.of(Utils.prefix()+" \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon4));
@@ -197,7 +197,7 @@ public class CaptureListener {
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-balls").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon4ballReward, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-candy").getBoolean()) Main.getInstance().giveItemStack(Main.pokemon4rc, pl);
                 if(Config.getInstance().getConfig().getNode("pixelhunt","rewards","custom-toggle").getBoolean()) Utils.getInstance().executeCommand(Utils.getInstance().getRarity(Main.pokemon4), p.getName());
-                if(Main.getInstance().hasEconomy) { Main.getInstance().addMoney(pl, Main.pokemon4moneyReward);
+                if(Main.getInstance().hasEconomy && Config.getInstance().getConfig().getNode("pixelhunt","rewards","give-money").getBoolean()) { Main.getInstance().addMoney(pl, Main.pokemon4moneyReward);
                 pl.sendMessage(Text.of(Utils.prefix()+" \u00A76You have been given \u00A7e"+Main.pokemon4moneyReward+" coins\u00A76!")); }
                 Utils.getInstance().randomisePokemon(4);
                 Sponge.getServer().getBroadcastChannel().send(Text.of(Utils.prefix()+" \u00A7fNew hunted Pok\u00E9mon is: \u00A7a"+Main.pokemon4));
