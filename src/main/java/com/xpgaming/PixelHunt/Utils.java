@@ -893,7 +893,7 @@ public class Utils {
     }
 
     public static String prefix() {
-        return "\u00A7f["+ Utils.formatText(Config.getInstance().getConfig().getNode("pixelhunt","lang","prefix").getString())+"]";
+        return Utils.formatText(Config.getInstance().getConfig().getNode("pixelhunt","lang","prefix").getString());
     }
 
     public static String lang(String node) {

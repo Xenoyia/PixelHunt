@@ -56,7 +56,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-@Plugin(id = Main.id, name = Main.name, version = "1.1",
+@Plugin(id = Main.id, name = Main.name, version = "1.1.1",
 		dependencies = {
 				@Dependency(id = "pixelmon")
 		})
