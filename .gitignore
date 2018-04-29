@@ -2,6 +2,7 @@ libs
 build
 .idea
 .gradle
+*.iml
 
 # Windows image file caches
 Thumbs.db
